@@ -6,8 +6,6 @@ categories: dev
 tags: spring
 ---
 
-#### Gradle + Spring Boot Jar 파일 만들고 실행
-
 Spring Boot는 내장 서버가 있기 때문에 Jar 파일을 만들어 배포가 쉽다.
 
 
