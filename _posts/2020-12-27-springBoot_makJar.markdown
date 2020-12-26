@@ -4,6 +4,7 @@ title:  "Gradle + Spring Boot Jar 파일 만들고 실행하기"
 subtitle:   "Gradle + Spring Boot Jar 파일 만들고 실행하기"
 categories: dev
 tags: spring
+comments: true
 ---
 
 #### Gradle + Spring Boot Jar 파일 만들고 실행
