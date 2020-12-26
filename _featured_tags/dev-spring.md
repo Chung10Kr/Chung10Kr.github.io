@@ -5,5 +5,5 @@ slug: spring
 category: dev
 menu: false
 order: 1
-header-img: "/img/spring-logo.png"
+header-img: "img/spring-logo.png"
 ---
