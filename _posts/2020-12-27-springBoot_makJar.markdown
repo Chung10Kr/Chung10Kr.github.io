@@ -6,18 +6,29 @@ categories: dev
 tags: spring
 ---
 
-### Gradle + Spring Boot Jar 파일 만들고 실행하기
+#### Gradle + Spring Boot Jar 파일 만들고 실행
 
-## build.gradle 수정
+Spring Boot는 내장 서버가 있기 때문에 Jar 파일을 만들어 배포가 쉽다.
 
+
+톰캣설치부터 이것저것 할 필요 없이 기본 Jar로 배포 해보자
+
+1\. build.gradle 수정
+
+```
  apply plugin: 'io.spring.dependency-management'
- 
+```
 
-## CMD로 해당 경로에서
+2\. CMD로 해당 경로에서
 
+```
 gradle bootjar
+```
 
-## 생선된 jar파일 실행
+3\. 생성된 jar파일 실행
+
 생성된 파일은 build/libs에 있다.
 
+```
  java -jar project-0.1.jar
+```
