@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  [Node] Node.js - 오라클 연동에 mybatis까지
-subtitle:   Node에 오라클에 mybatis까지
+title:  "[Node] Node.js - 오라클 연동에 mybatis까지"
+subtitle:   "Node에 오라클에 mybatis까지"
 categories: dev
 tags: node
 ---
