@@ -6,10 +6,13 @@ categories: dev
 tags: spring
 ---
 
-Spring Boot는 내장 서버가 있기 때문에 Jar 파일을 만들어 배포가 쉽다.
-
-
 톰캣설치부터 이것저것 할 필요 없이 기본 Jar로 배포 해보자
+
+
+Spring Boot는 **내장** **서버**가 있기 때문에 Jar 파일을 만들어 배포가 쉽다.
+
+
+
 
 1\. build.gradle 수정
 

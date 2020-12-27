@@ -6,6 +6,7 @@ categories: dev
 tags: node
 ---
 
+Node에 오라클(추천하지 않지만)연동 , Mybatis까지 적용해보자.
 
 ## 1.오라클 연동
 
