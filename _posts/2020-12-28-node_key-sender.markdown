@@ -8,7 +8,11 @@ tags: node
 물리적 키보드 입력과 같은 동작시키기!
 
 원격지 컴퓨터의 키보드 입력과 같은 동작이 필요했었습니다.
+
+
 나쁜 의도가 아닌 데이터 입력을 위한 기능이였고
+
+
 node-key-sender npm을 통해 해결한 내용을 포스팅 하도록 하겠습니다.
 
 ## 1.npm 설치
@@ -52,15 +56,15 @@ ks.sendKeys(['a', 'b', 'c']); // ->abc
 실제 결과값 : abC@
 */
 ```
-문자 순서가 뒤죽박죽디 되었다. 예를들어 **@A-1213** 가 **A-@1213** 이런식으로 결과는 항상 달랐다.
+문자 순서가 뒤죽박죽 되었다. 예를들어 **@A-1213** 가 **A-@1213** 이런식으로 결과는 항상 달랐다.
 
 # 문제 해결 고민
 
 
-우리는 모든 문자(특수문자 포함) 가 순서대로 키보드 입력이 되게 하려면
+모든 문자(특수문자 포함) 가 순서대로 키보드 입력이 되게 하려면
 
 
-**ks.sendKeys( arr );**의 **arr** 의 모든 문자가 들어가 있어야 할 것이며
+**ks.sendKeys( arr );**의 **arr** 의 배열 형식으로 넣어야 하고
 
 #,@ 와 같은 특수문자에 매핑이 되어있는 값을 찾아야 한다.
 
@@ -74,7 +78,7 @@ ks.sendKeys(['a', 'b', 'c']); // ->abc
 
 기존의 keyboardLayout을 재정의 
 
-(재정의 하는 이유 : 우리 프로젝트에는 #,@ 가 필요 하기 때문에) 
+(재정의 하는 이유 : 프로젝트에 #,@,- 가 필요 하기 때문에) 
 
 ```javascript
 //기존의 있던 keyboardLayout
@@ -151,8 +155,12 @@ var command = 'java -jar \"' + jarPath + '\" ' + arrParams.join(' ') + module.ge
 
    
 3. 테스트
+
 ```javascript
-  var ks = require("../utils/sender"); // .js파일을 재정의 했기 때문에 기존의 npm이 아닌 custom 한 js파일 require 한다. 
+
+  var ks = require("../utils/sender"); 
+  // .js파일을 재정의 했기 때문에 기존의 npm이 아닌 custom 한 js파일 require 한다. 
+
   var txt = (req.body.sendTxt || req.query.sendTxt) ; // 받은 텍스트
 
   var sendTxt = [];
@@ -181,5 +189,7 @@ var command = 'java -jar \"' + jarPath + '\" ' + arrParams.join(' ') + module.ge
 
 
 영어 까막눈이라 doc를 구석구석 찾아보지 못했습니다.
+
+
 혹시 다른방법이 있다면 알려주시면 감사하겠습니다.
 
