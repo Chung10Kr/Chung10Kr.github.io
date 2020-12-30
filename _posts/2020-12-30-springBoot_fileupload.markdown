@@ -62,6 +62,6 @@ Body -> form-data -> key 입력 -> 파란색 원 잘보면 select box의 file �
 
 크게 어렵거나 다른것은 없다.
 
-![img](https://chung10kr.github.io/assets/img//2020-12-30-1.png)
+![img](https://chung10kr.github.io/assets/img/2020-12-30-1.PNG)
 
 
