@@ -29,7 +29,7 @@ xls Template 사용하여 Excel download wirh Template
 
 ## 구현
 
-1. [npm install](https://www.npmjs.com/package/xlsx-template)
+#### [npm install](https://www.npmjs.com/package/xlsx-template)
 
 
 ```
@@ -37,7 +37,7 @@ npm i xlsx-template
 ```
 
 
-2. 구현
+#### 구현
 
 
 ```javascript
@@ -107,7 +107,7 @@ fs.readFile(path.join(rootPath, 'xlsTemplate/template', temp_name ), function(er
 ```
 
 
-3. [Excel Template Download](https://chung10kr.github.io/assets/img/template01.xlsx)
+#### [Excel Template Download](https://chung10kr.github.io/assets/img/template01.xlsx)
 
 
 ![img](https://chung10kr.github.io/assets/img/2020-12-31-1.PNG)
