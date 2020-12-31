@@ -6,21 +6,23 @@ categories: dev
 tags: node
 ---
 
-xls Template 사용하여 Excel download 구현해보겠 습니다.
+xls Template 사용하여 Excel download wirh Template
  
-현재 알고 있는 Excel download 방법 은 3가지 입니다.
+
+
+
+
+
+
+
+
+## 현재 알고 있는 Excel download 방법 은 3가지 입니다.
 
 1. 셀병합 , 셀 색변환등 엑셀작업을 Java,Node 단에서 작업해주는 방법 
-
 -> 추후 엑셀 양식 변경시 대응하기 어렵다.
-
-
 2. 그리드의 헤더만 엑셀 템플릿으로 만들어 리스트 데이터를 뿌려주는 방법
-
 -> 헤더만 엑셀 템플릿으로 만들어 데이터만 뿌려주기 때문에 리스트데이터가 아닌것은 어렵다.
-
 3. 셀병합등의 엑셀 작업도 엑셀 템플릿으로 만들고, 셀 위치를 지정하여 데이터를 뿌려줌
-
 -> 보고서 양식 출력에 적당
 
 
