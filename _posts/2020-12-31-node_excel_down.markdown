@@ -37,7 +37,7 @@ npm i xlsx-template
 ```
 
 
-1. 구현
+2. 구현
 
 
 ```javascript
@@ -107,7 +107,7 @@ fs.readFile(path.join(rootPath, 'xlsTemplate/template', temp_name ), function(er
 ```
 
 
-1. [Excel Template Download](https://chung10kr.github.io/assets/img/template01.xlsx)
+3. [Excel Template Download](https://chung10kr.github.io/assets/img/template01.xlsx)
 
 
 ![img](https://chung10kr.github.io/assets/img/2020-12-31-1.PNG)
