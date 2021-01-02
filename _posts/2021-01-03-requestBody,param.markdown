@@ -6,19 +6,17 @@ categories: dev
 tags: spring
 ---
 
-이 전의 [GET , POST ](https://chung10kr.github.io/dev/2021/01/02/get_post/) 포스팅 을 했었습니다.
+이 전의 [GET , POST](https://chung10kr.github.io/dev/2021/01/02/get_post/) 포스팅 을 했었습니다.
 
 
-HTTP 규칙을 통해 클라이언트와 서버가 주고받는데
+HTTP 규칙을 통해 클라이언트와 서버가 데이터를 주고받는데
 
 
-그 데이터를 서버에서 어떻게 처리하는지 궁금해서 포스팅 하는것은 아니고
+
+프로젝트 진행중 관련된 오류가 발생하여 정리해보겠습니다.
 
 
-프로젝트 진행중 오류가 발생하여 해결한 내용을 포스팅 하겠습니다.
-
-
-스프링에서 데이터를 받는 대표적인 방법은 **@RequestBody** 와 **@RequestParam** 가 있습니다.
+##### 스프링에서 데이터를 받는 대표적인 방법은 **@RequestBody** 와 **@RequestParam** 가 있습니다.
  
 
 ## @RequestBody
@@ -88,13 +86,24 @@ public String test(@RequestParam Map<String, Object> commandMap) {
 ```
 
 
-## 정리하다가
+## 정리면서
 
 
-정리하면서 테스트를 하다보니 @requestParam는 url 상에서 데이터를 찾습니다.
-생각해보면 POST방식은 Body에 데이터를 담아 전송시켜야하는데
+정리하면서 테스트를 하다보니 
+
+
+생각해보니 POST방식은 Body에 데이터를 담아 전송시켜야하는데
+
+
+@requestParam는 url 상에서 데이터를 찾고
+
+
 RequestParam와 Post랑은 같이 사용하면 안되는거 아닐까? 라고 생각했습니다.
+
+
 그래서 이 부분은
+
+
 추후에 content-type 정리하면서 같이 한번더 정리하겠습니다.
 
 
