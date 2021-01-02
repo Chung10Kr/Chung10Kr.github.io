@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[spring] @RequestBody vs @RequestParam  + content-type"
+title:  "[spring] @RequestBody vs @RequestParam"
 subtitle:   "@RequestBody vs @RequestParam"
 categories: dev
 tags: spring
