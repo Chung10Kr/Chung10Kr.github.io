@@ -11,7 +11,7 @@ categories: tip
 
 ### 포스팅 예정
 - JWT
-- @requestBody,@requestParam
+- @requestBody,@requestParam 정리하면서 나온 content-type랑, requsetParam이랑 POST같이 사용하면 안되는이유
 
 
 
