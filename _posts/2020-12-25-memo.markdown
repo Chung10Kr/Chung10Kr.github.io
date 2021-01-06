@@ -12,10 +12,13 @@ categories: tip
 ### 포스팅 예정
 - JWT
 - @requestBody,@requestParam 정리하면서 나온 content-type랑, requsetParam이랑 POST같이 사용하면 안되는이유
-
+- @modelattribute
+- 팩토리 패턴
+- @configuration
 
 
 
 ### 개인메모
-- 예비군원격교육
+- TFX5470UC
+- 올데이롱 TFX5470H
   
