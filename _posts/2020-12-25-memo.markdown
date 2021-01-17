@@ -11,13 +11,13 @@ categories: tip
 
 ### 포스팅 예정
 - JWT
-- @requestBody,@requestParam 정리하면서 나온 content-type랑, requsetParam이랑 POST같이 사용하면 안되는이유
 - 팩토리 패턴
-- @configuration
+- 의존성 주입
 
 
 
 ### 개인메모
-- TFX5470UC
-- 올데이롱 TFX5470H
+- [올데이롱 TFX5470H](http://www.11st.co.kr/products/2908569154?service_id=pcdn&utm_medium=%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90&utm_source=%EB%8B%A4%EB%82%98%EC%99%80_PC_PCS&utm_campaign=%EB%8B%A4%EB%82%98%EC%99%80pc_%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90%EA%B8%B0%EB%B3%B8&utm_term=)
+- [HP 파빌리온 게이밍](http://www.11st.co.kr/products/3083828412?service_id=pcdn&utm_medium=%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90&utm_source=%EB%8B%A4%EB%82%98%EC%99%80_PC_PCS&utm_campaign=%EB%8B%A4%EB%82%98%EC%99%80pc_%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90%EA%B8%B0%EB%B3%B8&utm_term=)
   
+
