@@ -25,7 +25,10 @@ ApplicationContext.getBean()으로 얻어질 수 있는 객체를 빈이라고 �
 ### 빈(Bean) 정의
 
 - XML 파일에 정의
-```xml
+
+
+```
+
 <!--
 class(필수): 정규화된 자바 클래스 이름
 id: bean의 고유 식별자
@@ -47,6 +50,7 @@ init method와 destroy method
 
 <!-- A bean definition with initialization method -->
 <bean id="..." class="..." init-method="..."></bean>
+
 ```
 
 - Component Scanning 
