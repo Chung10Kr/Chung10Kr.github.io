@@ -13,8 +13,9 @@ categories: tip
 - JWT
 - 팩토리 패턴
 - 의존성 주입
-
-
+- Sens SMS API 사용하는 방법
+- Ioc(제어의 역전)
+- Autowired 
 
 ### 개인메모
 - [올데이롱 TFX5470H](http://www.11st.co.kr/products/2908569154?service_id=pcdn&utm_medium=%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90&utm_source=%EB%8B%A4%EB%82%98%EC%99%80_PC_PCS&utm_campaign=%EB%8B%A4%EB%82%98%EC%99%80pc_%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90%EA%B8%B0%EB%B3%B8&utm_term=)
