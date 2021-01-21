@@ -71,8 +71,11 @@ Ball을 수정할때 Baseball을 수정해줘야 할 수도 있는 문제가 발
 
 ### 의준성 주입 방법
 
+
 -Contructor Injection : 생성자를 통한 전달
- 
+
+
+
 ```java
 class Baseball{
 	private Ball ball;
@@ -84,8 +87,12 @@ class Baseball{
 		this.ball.hit();
 	};
 }
+```
+
 
 -Method(Setter) Injection : setter()를 통한 전달
+
+
 
 ```java
 class Baseball{
