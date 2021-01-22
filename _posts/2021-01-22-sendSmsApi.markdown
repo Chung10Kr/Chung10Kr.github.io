@@ -28,11 +28,11 @@ tags: etc
 
 
 ## 요청 URL
-![img](https://chung10kr.github.io/assets/img/2021-01-22-1.jpg)
+![img](https://chung10kr.github.io/assets/img/2021-01-22-1.PNG)
 
 
 ## 요청 Body
-![img](https://chung10kr.github.io/assets/img/2021-01-22-2.jpg)
+![img](https://chung10kr.github.io/assets/img/2021-01-22-2.PNG)
 
 
 ## 코드
