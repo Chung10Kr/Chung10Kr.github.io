@@ -9,10 +9,10 @@ tags: etc
 [네이버 클라우드 플랫폼](https://www.ncloud.com/) 에서 제공하는 Sens SMS API를 사용해서 SMS 보내기
 
 
--[네이버 클라우드 플랫폼](https://www.ncloud.com/)
+-[참고 - 네이버 클라우드 플랫폼](https://www.ncloud.com/)
 
 
--[SMS API 참조서](https://apidocs.ncloud.com/ko/ai-application-service/sens/sms_v2/)
+-[참고 - SMS API 참조서](https://apidocs.ncloud.com/ko/ai-application-service/sens/sms_v2/)
 
 
 
