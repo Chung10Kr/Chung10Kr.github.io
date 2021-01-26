@@ -12,8 +12,6 @@ categories: tip
 ### 포스팅 예정
 - JWT
 - 팩토리 패턴
-- 의존성 주입
-- Sens SMS API 사용하는 방법
 - Ioc(제어의 역전)
 - @ControllerAdvice ,@ExceptionHandler
 
