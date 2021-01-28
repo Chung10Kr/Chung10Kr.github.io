@@ -43,7 +43,7 @@ tags: spring
 
 [Git Code](https://github.com/Chung10Kr/jwt_code.git)
 
-
+## TEST
 1. request - /jwt/get/token with parameter(userId , userNm)
 2. return token
 3. request - /jwt/get/userInfo with header(token)
