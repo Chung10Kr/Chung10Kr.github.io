@@ -44,7 +44,7 @@ public class Interceptor extends HandlerInterceptorAdapter {
     */
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        log.info("컨트롤러 끝나고");
+        log.info("컨트롤러 진입 후");
     }
 
     // 컨트롤러 진입 후 view가 정상적으로 랜더링 된 후 제일 마지막에 실행
@@ -54,11 +54,12 @@ public class Interceptor extends HandlerInterceptorAdapter {
     }
 
 }
-
-
 ```
 
-#### 2.WebMvcConfigurerAdapter를 상속받은 설정 클래스 구현
+#
+
+
+### 2.WebMvcConfigurerAdapter를 상속받은 설정 클래스 구현
 
 ```java
 
