@@ -40,6 +40,6 @@ jwt를 구현하면서 필터 관련 개념이 나왔고
 
 ---------------------------------------
 
-[filter sample code - XSS]()
+[filter sample code - XSS](https://chung10kr.github.io/dev/2021/01/30/xss-filter-copy/)
 
-[Interceptor의 sample code - XSS]()
+[Interceptor의 sample code - XSS](https://chung10kr.github.io/dev/2021/01/31/Interceptor%EC%9D%98_sample/)
