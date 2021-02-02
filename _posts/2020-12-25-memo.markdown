@@ -13,7 +13,8 @@ categories: tip
 - 팩토리 패턴
 - Ioc(제어의 역전)
 - @ControllerAdvice ,@ExceptionHandler
-- 그런 REST API로 괜찮은가
+- HATEOAS
+- RESTFULL
 - Context
 
 ### 개인메모

@@ -1,0 +1,256 @@
+---
+layout: post
+title:  "[RST] そんなREST APIで大丈夫か - 1"
+subtitle:   "그런 REST API로 괜찮은가?"
+categories: dev
+tags: etc
+---
+
+유투브에서 [그런 REST API로 괜찮은가](https://www.youtube.com/watch?v=RP_f5dMoHFc)의 발표를 봤다.
+
+
+6개월에 한번씩 벌써 3번은 봤다.
+
+
+물론 아직  이해는 못하고 있다.
+
+
+1년전 처음 이 발표를 보고, 6개월전 이 발표를 보고, 지금 발표를 다시 보고 나서
+
+
+그래도 6개월전보다 귀에 들어오는게 두어개 늘었을땐
+
+
+부족했지만 공부에 아예 손을 놓지 않았구나 하고 느낀다.
+
+
+[그런 REST API로 괜찮은가](https://www.youtube.com/watch?v=RP_f5dMoHFc) 발표는 나에게 그런 존재다.
+
+
+전공자는 아니지만 그래도 이왕 개발자 시작한거 
+
+
+나 떄문에 개발자세계를 하향평준화는 시키면 안되는거 아닌가.
+
+
+공부하자..
+
+
+
+
+# REST (****Re****presentational ****S****tate ****T****ransfer)
+
+
+>REST(Representational State Transfer)는 월드 와이드 웹과 같은 분산 하이퍼미디어 시스템을 위한 ****소프트웨어 아키텍처의 한 형식****이다. 이 용어는 로이 필딩(Roy Fielding)의 2000년 박사학위 논문에서 소개되었다. 필딩은 HTTP의 주요 저자 중 한 사람이다. 이 개념은 네트워킹 문화에 널리 퍼졌다.
+
+>엄격한 의미로 ****REST는 네트워크 아키텍처 원리의 모음****이다. 여기서 '네트워크 아키텍처 원리'란 자원을 정의하고 자원에 대한 주소를 지정하는 방법 전반을 일컫는다. 간단한 의미로는, 웹 상의 자료를 HTTP위에서 SOAP이나 쿠키를 통한 세션 트랙킹 같은 별도의 전송 계층 없이 전송하기 위한 아주 간단한 인터페이스를 말한다. 이 두 가지의 의미는 겹치는 부분과 충돌되는 부분이 있다. 필딩의 REST 아키텍처 형식을 따르면 HTTP나 WWW이 아닌 아주 커다란 소프트웨어 시스템을 설계하는 것도 가능하다. 또한, 리모트 프로시저 콜 대신에 간단한 XML과 HTTP 인터페이스를 이용해 설계하는 것도 가능하다. 
+
+[참고 - 위키백과](https://ko.wikipedia.org/wiki/REST)
+
+
+
+### 등장
+Q: 어떻게 인터넷에서 정보를 공유할 것인가?
+
+
+A: 정보들을 하이퍼텍스트로 연결한다.
+
+- 표현방식 : HTML 
+- 식별자 : URL 
+- 전송 방법 : HTTP
+
+그후
+
+로이필딩은 고민을 함.
+
+Q: HTTP/1.0 작업을 할 껀데 기존에 구축된 웹들과 호환성에 문제가 상기지 않을까?
+
+
+Q: 어떻게 하면 웹을 망가트리지 않고 HTTP를 고칠 수 있을까?
+
+A: HTTP Object Model -> 4년후 **REST**로 발표
+
+
+# API
+- Microsoft가 원격으로 다른 시스템의 메서드를 호출할수 있는 XML-RPC를 개발 -> SOAP로 개명
+- saleforce에서 SOAP API라는 API를 발표
+- 4년 후 flicker에서 REST API를 발표
+  
+| SOAP | REST |
+|:---:|---:|
+| 복잡 | 단순 |
+| 규칙 많음| 규칙 적음 |
+| 어렵다 | 쉽다. |
+
+-> REST API 승리 결국에 saleforce도 REST API지원(2010년)
+
+# 이건 REST API 아니야! by 로이필딩
+REST **제약조건**을 모두 지키지 않았기 때문에
+
+현재 사용되는 REST API는 REST API가 아닌 **HTTP API**다.
+
+
+
+# REST 6가지 제약조건
+- client-server : 아키텍처를 단순화시키고 작은 단위로 분리(decouple)함으로써 클라이언트-서버의 각 파트가 독립적으로 개선될 수 있도록 해준다..
+- stateless : 각 요청 간 클라이언트의 콘텍스트가 서버에 저장되어서는 안 된다
+- cache : WWW에서와 같이 클라이언트는 응답을 캐싱할 수 있어야 한다
+- uniform interface(인터페이스 일관성) : 일관적인 인터페이스로 분리되어야 한다
+- layered system : 클라이언트는 보통 대상 서버에 직접 연결되었는지, 또는 중간 서버를 통해 연결되었는지를 알 수 없다. 중간 서버는 로드 밸런싱 기능이나 공유 캐시 기능을 제공함으로써 시스템 규모 확장성을 향상시키는 데 유용하다.
+- code on demand :자바 애플릿이나 자바스크립트의 제공을 통해 서버가 클라이언트가 실행시킬 수 있는 로직(코드)을 전송하여 기능을 확장시킬 수 있다.
+
+#### HTTP만 잘 따라도 대체로 위의 제약조건을 잘 따른다. - uniform interface 빼고
+
+
+# uniform interface의 제약조건
+- identification of resources : 리소스가 URL로 식별되면 된다.
+- manipulation of resources through representations : representations전송을 통해서 리소스를 조작해야 한다.
+- **self-descriptive messages** -> 이게 잘 안지켜짐
+- **hypermedia as the engine of application state (HATEOAS)** -> 이게 잘 안지켜짐
+
+
+## self-descriptive messages
+메시지는 스스로를 설명해야 한다.
+
+![img](https://chung10kr.github.io/assets/img/2021-02-01-1.PNG)
+
+
+## hypermedia as the engine of application state (HATEOAS)
+애플리케이션의 상태는 Hyperlink를 이용해 전이되어야 한다.
+
+
+## 왜 uniform interface? -> ****독립적인 진화****
+- 서버와 클라이언트가 각각 독립적으로 진화한다.
+- 서버의 기능이 변경되어도 클라이언트를 업데이트 할 필요가 없다.
+- REST를 만들게 된 계기 : "How do I improve HTTP without breaking the WEB"
+
+
+
+
+# 웹
+- 웹페이지가 변경했다고 웹 브라우저를 업데이트 할 필요가 없다.
+- 웹브라우저를 업데이트 했다고 웹 페이지를 변경할 필요도 없다.
+- HTTP 명세가 변경되어도 웹은 잘 동작한다.
+- HTML 명세가 변경되어도 웹은 잘 동작한다.
+
+#### -> **웹 페이지들은 REST를 매우 만족하고 있다.!**
+
+
+
+# REST가 웹의 독립적 진화에 도움을 주었나
+- HTTP에 지속적으로 영향을 줌
+- Host 헤더 추가
+- 길이 제한을 다루는 방법이 명시
+- URL에서 리소스의 정의가 추상적으로 변경됨: "식별하고자 하는 무언가"
+- 기타 HTTP와 URL에 많은 영향을 줌
+- HTTP/1.1 명세 최신판에서 REST에 대한 언급이 들어감  
+
+
+
+# 그런데 REST API는?
+- REST API는 REST 아키텍처 스타일을 잘 따라야 한다.
+- 오늘날 스스로 REST API라고 하는 API들의 대부분이 REST 아키텍처 스타일을 따르지 않는다.
+
+### 로이필링 曰 
+- REST API도 저 위의 제약조건 지켜야 함!
+- 제약조건을 따르던지 REST API가 아닌 다른 단어를 써라!
+
+
+## 그럼 이제 어떻게?
+로이필딩의 요구대로 REST API를 구현해보자.
+
+
+## 왜 API는 REST가 잘 안되나?
+
+### 비교 - 1
+
+| | 흔한 웹페이지 | HTTP API |
+|---|:---:|---:|
+|Protocol| HTTP | HTTP |
+|커뮤니케이션| 사람-기계 | 기계-기계 |
+|Media Type| HTML | JSON |
+
+### 비교 - 2
+
+| | HTML | JSON |
+|---|:---:|---:|
+|Hyperlink| 됨 (a 태그) | 정의되어있지 않음 |
+|Self-descriptive| 됨(HTML명세) | 불완전* |
+
+JSON-> 문법해석은 가능하지만, 의미를 해석하려면 별도로 문서가 필요 ex) API 정의서
+
+
+***% JSON은 Self-descriptie와 HATEOAS를 만족하지 못함**
+
+
+## 그렇다면 Self-descriptie와 HATEOAS는 독립적인 진화에 도움을 주나?
+
+### Self-descriptie 확장 가능한 커뮤니케이션
+- 서버나 클라이언트가 변경되더라도 오고가는 메시지는 언제나 Self-descriptie하므로 언제나 해석이 가능하다.
+
+### HATEOAS 애플리케이션 상태 전이의 late binding
+- 어디서 어디로 전이가 가능한지 미리 결정되지 않는다. 
+- 어떤 상태로 전이가 완료되고 나서야 그 다음 전이 될 수 있는 상태가 결정된다.
+- 쉽게 말해서 링크는 동적으로 변경될 수 있다.
+
+
+# 그럼 REST API를 고쳐보자!
+
+## Self-descriptive
+### 방법 1 -  Media Type
+
+1.미디어 타입을 하나 정의
+
+
+2.미디어 타입 문서를 작성
+###
+
+3.IANA에 미디어 타입을 등록 , 문서를 타입의 명세로 등록
+
+
+4.이 메시지를 보는 사람은 명세를 찾아갈 수 있으므로 이 메시지의 의미를 온전히 해석 가능
+
+
+
+단점
+- 매번 media type을 정의해야한다.
+
+
+### 방법 2 -  Profile
+1.key의 의미를 정의한 명세를 작성한다.
+
+
+2.Link 헤더의 profile relation으로 해당 명세를 링크한다.
+
+
+4.이 메시지를 보는 사람은 명세를 찾아갈 수 있으므로 이 메시지의 의미를 온전히 해석 가능
+
+단점
+- 클라이언트가 Link헤더와 profile을 이해해야한다. 
+-  Content negotiaion을 할 수 없다.
+
+
+
+## HATEOAS
+### 방법 1 -  data로
+data에 다양한 방법으로 하이퍼링크를 표현한다.
+
+단점
+- 링크를 표현하는 방법을 직접 정의해야 한다.
+
+### 방법 2 -  HTTP 헤더로
+Link , Location드의 헤더로 링크를 표현한다.
+
+단점
+- 정의된 relation만 활용하다면 표현에 한계가 있다.
+
+
+
+# 정리
+
+* 오늘날 대부분의 "REST API"는 사실 REST를 따르지 않고 있다.
+* REST의 제약조건중 self-descriptive와 HATEOAS를 잘 만족하지 못하기 때문이다.
+* REST를 따르겠다면 self-descriptive와 HATEOAS를 만족시켜야한다.
+* REST를 따르지 않겠다면 REST API를 다른 단어로 불러야 한다. 
+* 그냥 이대로 REST API로 부를 수도 있지만 로이필딩이 싫어한다.
+* "최대 다수의 최대 행복" 공리주의 사상에 입각하여 나는 그냥 REST API로 간다.
