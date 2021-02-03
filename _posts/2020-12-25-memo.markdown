@@ -2,7 +2,7 @@
 layout: post
 title:  "[memo]  개인 memo"
 subtitle:   "memo"
-categories: tip
+categories: memo
 ---
 개인 저장용 입니다.
 
@@ -13,8 +13,6 @@ categories: tip
 - 팩토리 패턴
 - Ioc(제어의 역전)
 - @ControllerAdvice ,@ExceptionHandler
-- HATEOAS
-- RESTFULL
 - Context
 
 ### 개인메모
