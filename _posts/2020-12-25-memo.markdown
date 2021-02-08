@@ -10,7 +10,18 @@ categories: memo
 
 
 ### 포스팅 예정
-- 팩토리 패턴
+- ~~그런 REST API로 괜찮은가~~
+- ~~디자인패턴~~
+- ~~spring boot jar파일 생성~~
+- ~~NodeJs 오라클 , Mybatis적용~~
+- ~~NodJs Excel Template Download~~
+- ~~Get VS POST~~
+- ~~requestBody vs requestHeader vs Modelattribute~~
+- ~~의존성 주입~~
+- ~~네이버 SMS API~~
+- ~~JWT~~
+- ~~fileter VS interceptor~~
+- ~~샤오미 전기난로 리뷰~~
 - Ioc(제어의 역전)
 - @ControllerAdvice ,@ExceptionHandler
 - Context
