@@ -18,6 +18,8 @@ tags: review
 - 가격
 
 # 사양
+
+
 |  | 사양 | 비고 |
 |---|:---:|:---:|
 | 운영체제 | 프리도스 | 윈도우,오피스,한글 별도 구매함|
@@ -29,16 +31,18 @@ tags: review
 | 배터리 | 43Wh | 회사,집에서 사용하기 때문에 상관없음|
 | 가격 | 50 | |
 
+
+
 # 디자인
 - 너무 깔끔
-- 
-![img](https://chung10kr.github.io/assets/img/2021-02-13-2.jpg)
+  
+![img](https://chung10kr.github.io/assets/img/2021-02-13-2.PNG)
 
 
-![img](https://chung10kr.github.io/assets/img/2021-02-13-1.jpg)
+![img](https://chung10kr.github.io/assets/img/2021-02-13-1.PNG)
 
 
-![img](https://chung10kr.github.io/assets/img/2021-02-13-3.jpg)
+![img](https://chung10kr.github.io/assets/img/2021-02-13-3.PNG)
 
 
 # 정리
