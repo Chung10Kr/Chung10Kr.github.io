@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "[mybatis] Mybatis #,$ 차이"
+subtitle:   "나의 batis"
+categories: dev
+tags: etc
+---
+
+시큐어코딩중 ${} 문법을 #{}로 변경하라는 보안조치가 내려왔다.
+
+
+파라미터 작성법을 다시 한번 정리해보자.
+
+
+# #{}
+- 파라미터가 String 형태로 들어온다.  user_nm 값이 홍길동 이라면 user_nm='홍길동' 형태가 된다. ex)  user_nm = #{user_nm}   -> user_nm='홍길동'
+- 쿼리 주입(SQL Injection) 을 예방할수 있다. 
+
+### 쿼리주입(SQL Injection)
+- 임의의 SQL문을 주입하고 실행되게 하여 데이터베이스가 비정삭적인 동작을 취하도록 조작하는 행위
+
+
+```xml
+
+<select id='~~~'>
+    select user_id , user_nm , user_age
+    from   user
+    where  user_id = #{user_id}
+    and    user_nm = #{user_nm}
+</select>
+
+```
+
+
+# ${}
+- 파라미터가 바로 출력
+- 해당 컬럼에 자료형에 맞춰 파라미터 자료형이 변경됨
+- 쿼리 주입을 예방 할수 없다.
+- 테이블이나, 컬럼명을 파라미터로 전달 하고 싶을때 사용
+
+```xml
+
+<select id='~~~'>
+    select user_id , user_nm , user_age
+    from   user
+    order by ${ordr_nm} 
+</select>
+
+```

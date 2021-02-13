@@ -23,6 +23,7 @@ categories: memo
 - ~~fileter VS interceptor~~
 - ~~샤오미 전기난로 리뷰~~
 - ~~IOC~~
+- ~~mybatis #, $차이~~
 - @ControllerAdvice ,@ExceptionHandler
 
 
