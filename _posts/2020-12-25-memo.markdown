@@ -22,9 +22,9 @@ categories: memo
 - ~~JWT~~
 - ~~fileter VS interceptor~~
 - ~~샤오미 전기난로 리뷰~~
-- Ioc(제어의 역전)
+- ~~IOC~~
 - @ControllerAdvice ,@ExceptionHandler
-- Context
+
 
 ### 개인메모
 
