@@ -26,6 +26,7 @@ categories: memo
 - ~~mybatis #, $차이~~
 - @ControllerAdvice ,@ExceptionHandler
 - ~~JNDI~~
+- ~~JSP 동작원리, 컴파일 과정 & JSTL~~
 
 ### 개인메모
 
