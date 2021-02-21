@@ -1,0 +1,134 @@
+---
+layout: post
+title:  "[JAVA] Java 컴파일 정리"
+subtitle:   "Java 컴파일 정리"
+categories: dev
+tags: java
+---
+
+지난번에 [JSP 컴파일](https://chung10kr.github.io/dev/2021/02/21/JSP/) 에 대해 포스팅했었다.
+
+그렇다면 Java는 어떻게 컴파일 될까? 
+
+이것까지 해보자.
+
+
+# 시작하기전
+
+컴퓨터는 0과 1로만 모든 명령을 이해하고 실행한다.
+
+
+우리는 Java , Javascript 등 의 사람이 이해하는 언어로 컴퓨터에게 명령한다.
+
+
+사람이 이해하는 언어를 컴퓨터가 이해할 수 있는 언어로 바꾸어 주는 과정을 컴파일,인터프리터 라고 한다.
+
+# 컴파일
+- 고급 언어로 작성된 프로그램 전체를 목적 프로그램으로 번역한 후 실행 프로그램을 생성합니다.
+- 번역 실행 과정을 거쳐야 하기 때문에 번역 과정이 번거롭고 번역 시간이 오래 걸리지만, 한번 번역한 후에는 다시 번역하지 않으므로 실행 속도가 빠릅니다.
+- C언어 Java 등
+
+
+# 인터프리터
+- 고급 언어로 작성된 프로그램을 한 줄 단위로 받아들여 번역하고, 번역과 동시에 프로그램을 한 줄 단위로 즉시 실행
+- 프로그램이 직접 실행되므로 목적 프로그램은 생성되지 않습니다.
+- 줄 단위로 번역, 실행되기 떄문에 시분할 시스템에 유용하며 원시 프로그램의 변화에 대한 반응이 빠릅니다.
+- 번역 속도는 빠르지만 프로그램 실행 시 매번 번역해야 하므로 실행 속도는 느립니다.
+- Python 등
+- CPU의 사용시간의 낭비가 큽니다.
+
+
+# Java 컴파일 및 실행
+
+Java는 JDK에 포함되어 있는 javac을 통해 컴파일한다.
+
+
+```
+javac <option> <filename.java>   or  이클립스나 인텔리
+```
+
+filename.class 생성
+
+
+```
+java <filename> 
+```
+
+실행
+
+
+# 실행 과정
+
+1. Java(.java) 파일을 이클립스 또는 javac로 컴파일하여 .class파일 생성
+2. 클래스 로더가 .class 파일을 JVM으로 로딩
+3. 실행엔진에 의해 기계어로 해석되어 메모리 상(Runtime Data Area)에 배치
+
+![img](https://chung10kr.github.io/assets/img/2021-02-22-1.PNG)
+
+-----각각의 설명은 아래-----
+
+
+## JVM (Java Virtual Machine)
+
+JVM은 Java와 OS 사이에 존재하는 가상머신이다.
+
+
+JAVA(.java)파일을 실행하기 위해서는 Java Byte Code(.class) 변환하여야 하고
+
+
+이때 변환된 Java Byte Code를 OS에 맞게 해석하는 역할을 하는게 JVM이다.
+
+
+JVM은 메모리 관리에도 관여하는데 그 예로
+
+
+GC(Garbage Collection)을 이용해 메모리를 관리하여 까다로운 메모리 영역 관리를 보다 손쉽게 할 수 있다.
+
+
+이와 반대로 C, C++와 같은 언어는 JVM과 같은 역할을 해주는 주체가 없어서 직접 free() 메서드를 통해 할당된 메모리를 해제해줘야 하지만, 
+
+
+Java는 JVM의 GC(Garbage Collection)을 이용해 오브젝트가 필요하지 않은 시점에 알아서 free()를 실행한다.
+
+
+JVM의 분류
+1. .class 파일 및 라이브러리를 로딩하는 클래스 로더
+2. 로딩된 class를 수행하기 위한 실행시간 데이터 영역(Runtime Data Area)
+3. Class를 실행하는 실행엔진(Excecution engine)
+
+## 클래스 로더
+
+자바 프로그램은 한개 혹은 그 이상의 클래스들의 조합으로 실행된다. 
+
+실행시 모든 클래스 파일이 한 번에 JVM 메모리에 로딩되지 않고 , 요청 순간 로딩된다. 
+
+자바의 클래스로더가 이런 역할을 수행함.
+
+## 실행엔진
+
+실행엔진의 분류
+- Interpreter : 자바 바이트 코드를 한줄 씩 실행. 속도가 느림.
+- JIT Compiler : Interpreter의 단점을 보완. 전체 바이트 코드를 컴파일. 속도가 느림. 하지만 캐시 사용으로 한번 컴파일 하면 다음에는 빠르게 수행됨.
+
+## 데이터 영역( Runtime Data Area )
+- Stack Area : 클래스 내의 메소드에서 사용되는 정보들이 저장되는 공간입니다. 매개변수, 지역변수, 리턴값 등이 저장되며 LIFO(Last In First Out) 방식으로 메소드 실행 시 저장되었다가 실행이 완료되면 제거됩니다.
+
+- Method(Class,Static) Area : 클래스와 메소드, 멤버(클래스, 인스턴스)변수와 상수(final) 정보 등이 저장되는 공간입니다
+
+- Heal Area : New명령어를 통해 생성한 인스턴스와 배열 등의 참조형 변수정보가 저장되는 공간입니다. 물론 Method Area에 올라온 클래스들만 생성이 가능합니다. GC의 대상이 된다.
+
+- Pc register : 쓰레드마다 하나씩 생성. JVM 명령의 주소값이 저장되는 공간입니다.
+
+
+- native method stack : 자바 외 다른 언어의 호출을 위해 할당되는 영역입니다.
+
+
+
+
+[참고 - blog](https://aljjabaegi.tistory.com/387)
+
+
+[참고 - blog](https://m.blog.naver.com/PostView.nhn?blogId=choigohot&logNo=40192701035&proxyReferer=https:%2F%2Fwww.google.com%2F)
+
+
+[참고 - blog](https://umanking.github.io/2019/06/25/java-class-loader/)
