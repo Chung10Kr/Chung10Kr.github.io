@@ -27,7 +27,13 @@ categories: memo
 - @ControllerAdvice ,@ExceptionHandler
 - ~~JNDI~~
 - ~~JSP 동작원리, 컴파일 과정 & JSTL~~
-- Java 컴파일
+- ~~Java 컴파일~~
+- ~~MySql LIMIT  OFFSET ~~
+- ~~sql_calc_found_rows , SELECT FOUND_ROWS()~~
+- 서블릿
+- Java EE
+- EJB
+- POJO
 
 ### 개인메모
 
