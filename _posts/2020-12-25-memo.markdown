@@ -30,7 +30,7 @@ categories: memo
 - ~~Java 컴파일~~
 - ~~MySql LIMIT  OFFSET ~~
 - ~~sql_calc_found_rows , SELECT FOUND_ROWS()~~
-- 서블릿
+- ~~서블릿~~
 - Java EE
 - EJB
 - POJO
