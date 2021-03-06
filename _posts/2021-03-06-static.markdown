@@ -1,0 +1,90 @@
+---
+layout: post
+title:  "[Spring Boot] 외부 정적 리소스 처리하기"
+subtitle:   "정적 리소스 처리하기"
+categories: dev
+tags: spring
+---
+
+파일업로드는 아마 기본적으로 모든 프로젝트에 구현 되어있을것이다.
+
+
+필자의 사이드 프로젝트에도 파일업로드, 파일다운로드 업무가 있고
+
+
+그것을 구현했다.
+
+
+이때 업로드 된 파일을 관리하는 방법은 여러가지가 있지만
+
+
+우리 프로젝트에서는 프로젝트가 있는 위치가 아닌 외부의 files 폴더를 만들어 사용하려 했다.
+
+
+
+그때 그 파일들에 접근하는 방법을 포스팅해보려 한다.
+
+
+사실 이 문제가지고 3일동안 뻘짓뻘짓을 다 했기 때문에 그에 대한 결과 기록하는 형식으로 포스팅 하려 한다.
+
+
+
+# 정적 리소스
+
+- 정적 리소스는 이미 만들어져 있는 리소스 (html , css, js, 이미지 파일등)을 말한다.
+
+
+
+
+# application.properties
+
+```xml
+# 파일 업로드 경로
+file.url=C:/DEV/project/01.HI/files/
+```
+
+
+
+# WebConfig.java
+```java
+@Value("${file.url}") 
+  private String uploadImagePath; 
+
+  @Override 
+  public void addResourceHandlers(ResourceHandlerRegistry registry) { 
+    
+    registry.addResourceHandler("/upload/**") 
+    .addResourceLocations("file:///"+uploadImagePath)  // 웹에서 이미지 호출시 'file:///' 설정됨
+    .setCachePeriod(3600)
+    .resourceChain(true)
+    .addResolver(new PathResourceResolver());
+
+  };
+
+```
+
+# 테스트
+http://localhost:11411/upload/2021/01/01/text.PNG 
+http://localhost:11411/upload/text.PNG
+
+
+
+# 뻘짓1
+
+*, **의 차이는 파일과 폴더의 차이
+
+
+# 뻘짓2
+
+스프링 시큐리티를 사용중이라면 
+
+
+시큐리티의 **matchPatten**에 "/upload/**" 추가 설정이 필요하다.
+
+
+
+
+
+
+
+

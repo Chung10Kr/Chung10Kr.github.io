@@ -31,9 +31,7 @@ categories: memo
 - ~~MySql LIMIT  OFFSET ~~
 - ~~sql_calc_found_rows , SELECT FOUND_ROWS()~~
 - ~~서블릿~~
-- Java EE
-- EJB
-- POJO
+- ~~정적 리소스 처리 ( 스프링부트 )~~
 
 ### 개인메모
 
