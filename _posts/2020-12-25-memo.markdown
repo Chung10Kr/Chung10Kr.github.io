@@ -32,6 +32,8 @@ categories: memo
 - ~~sql_calc_found_rows , SELECT FOUND_ROWS()~~
 - ~~서블릿~~
 - ~~정적 리소스 처리 ( 스프링부트 )~~
+- ~~서버 사이드 랜더링~~
+
 
 ### 개인메모
 
