@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "[JAVASCRIPT & Jquery] input 합계 구하기 "
+subtitle:   "클래스로"
+categories: dev
+tags: etc
+--- 
+
+### input 태그들의 합계 구하기.
+
+```
+
+    var tot = 0;
+    
+    //클래스가 classNm의 value의 합을 계산
+    $('.classNm').each(function(){
+    	tot += Number($(this).val()); 
+    });
+
+    console.log( tot );
+
+```
