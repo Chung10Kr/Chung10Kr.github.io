@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  "[etc] 앵커 onclick , button onclick의 올바른 사용법"
+title:  "[etc] 앵커에서의 onclick "
 subtitle:   ""
 categories: dev
 tags: etc
 --- 
-
-
 
 프로젝트 진행중 버튼태그에 대한 표준을 잡아주지 않으면 
 
@@ -106,4 +104,4 @@ tags: etc
 
 
 
-## 버튼을 구현시 앵커태그는 지양하자.
+## 결론 -> 버튼을 구현시 앵커태그는 지양하자.
