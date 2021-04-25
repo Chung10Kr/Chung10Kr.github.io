@@ -99,7 +99,7 @@ tags: etc
 ![img](https://chung10kr.github.io/assets/img/2021-04-25-2.PNG)
 
 
-## 앵커태그의 올바른 사용법
+## 앵커태그의 의미를 해친다.
 
 ![img](https://chung10kr.github.io/assets/img/2021-04-25-3.PNG)
  
