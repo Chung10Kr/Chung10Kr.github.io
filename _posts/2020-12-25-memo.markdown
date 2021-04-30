@@ -12,32 +12,9 @@ categories: memo
 [RN 아이콘](https://oblador.github.io/react-native-vector-icons/)
 
 
-### 포스팅 예정
-- ~~그런 REST API로 괜찮은가~~
-- ~~디자인패턴~~
-- ~~spring boot jar파일 생성~~
-- ~~NodeJs 오라클 , Mybatis적용~~
-- ~~NodJs Excel Template Download~~
-- ~~Get VS POST~~
-- ~~requestBody vs requestHeader vs Modelattribute~~
-- ~~의존성 주입~~
-- ~~네이버 SMS API~~
-- ~~JWT~~
-- ~~fileter VS interceptor~~
-- ~~샤오미 전기난로 리뷰~~
-- ~~IOC~~
-- ~~mybatis #, $차이~~
-- @ControllerAdvice ,@ExceptionHandler
-- ~~JNDI~~
-- ~~JSP 동작원리, 컴파일 과정 & JSTL~~
-- ~~Java 컴파일~~
-- ~~MySql LIMIT  OFFSET ~~
-- ~~sql_calc_found_rows , SELECT FOUND_ROWS()~~
-- ~~서블릿~~
-- ~~정적 리소스 처리 ( 스프링부트 )~~
-- ~~서버 사이드 랜더링~~
-- A태그 버튼태그 onclick 비교
+### 할거
 - 빅오표기법
+- 자바스크립트 깊은복사 얕은 복사
 
 
 
