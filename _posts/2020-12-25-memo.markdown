@@ -13,16 +13,13 @@ categories: memo
 
 
 ### 할거
-- 빅오표기법
+- 깊이우선탐색
 - 자바스크립트 깊은복사 얕은 복사
 
 
 
 ### 개인메모
 
-- [리전 5](http://www.11st.co.kr/products/2875818757?service_id=pcdn&utm_medium=%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90&utm_source=%EB%8B%A4%EB%82%98%EC%99%80_PC_PCS&utm_campaign=%EB%8B%A4%EB%82%98%EC%99%80pc_%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90%EA%B8%B0%EB%B3%B8&utm_term=)
-- [올데이롱 TFX5470H](http://www.11st.co.kr/products/2908569154?service_id=pcdn&utm_medium=%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90&utm_source=%EB%8B%A4%EB%82%98%EC%99%80_PC_PCS&utm_campaign=%EB%8B%A4%EB%82%98%EC%99%80pc_%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90%EA%B8%B0%EB%B3%B8&utm_term=)
-- [HP 파빌리온 게이밍](http://www.11st.co.kr/products/3083828412?service_id=pcdn&utm_medium=%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90&utm_source=%EB%8B%A4%EB%82%98%EC%99%80_PC_PCS&utm_campaign=%EB%8B%A4%EB%82%98%EC%99%80pc_%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90%EA%B8%B0%EB%B3%B8&utm_term=)
 - [한성 무접점](http://www.11st.co.kr/products/2907612989?utm_medium=%EA%B2%80%EC%83%89&gclid=Cj0KCQjw1PSDBhDbARIsAPeTqrdmVuIEaHOLrCjHe31aD6gLDDjlGQKMcozw-BoZUECm2612bSLJBe0aAn1qEALw_wcB&utm_source=%EA%B5%AC%EA%B8%80_PC_S_%EC%87%BC%ED%95%91&utm_campaign=%EA%B5%AC%EA%B8%80%EC%87%BC%ED%95%91PC+%EC%B6%94%EA%B0%80%EC%9E%91%EC%97%85&utm_term=)  
 
 
@@ -31,5 +28,3 @@ categories: memo
 ### 알고리즘
 
 ![img](https://chung10kr.github.io/assets/img/2021-04-25-1.PNG)
-
-- 그리디 
