@@ -1,0 +1,207 @@
+---
+layout: post
+title:  "[etc] 재귀함수 test"
+subtitle:   ""
+categories: dev
+tags: etc
+--- 
+
+
+```javascript
+
+# 1+2+3+4+....100
+/*
+재귀함수
+
+내가 나를 호출하는 함수
+
+반복문 <-> 재귀함수 
+반복문으로 표현할 수 있는것은 재귀함수로 표현 할 수 있고
+재귀 함수로 표현 할 수 있는것은 반복문으로 표현 할 수 있다.
+*/
+
+let n = 100;
+
+let s=0;
+for( var i=1; i<n+1; i++)
+{
+ s+=i;
+}
+console.log(s)
+// ->이거는 O(n)   빅오N n이  -> n에 비례한다.
+
+
+console.log( n*(n+1)/2 ); //더한값
+// ->이거는 O(1)   빅오1 -> 반복이 없어서 1
+
+function f(n){
+    if( n <= 1) return 1; 
+    // 재귀함수의 종료조건은 무조건 있어야 함.. 없으면 무한반복 
+    return n + f(n-1);
+}
+console.log(`재귀함수 : ${f(100)}`)
+
+```
+
+
+# 2진수 변환
+
+```javascript
+
+/*
+재귀함수 -> 2진수 변환
+2  11  1
+2   5  1
+2   2  0
+    1
+1011-> 이게 11을 2진법으로 변환한거
+
+*/
+
+
+let result ='';
+var x = 11;
+while(true){
+   if(x%2==0){
+       result+='0';
+   }else{
+       result+='1';
+   };
+   x = Math.floor( x/2 );
+
+   if( x ==1 || x == 0){
+       result+= x.toString();
+       break;
+   };
+}
+console.log( result.split('').reverse().join('') );
+
+
+
+function 이진법(숫자){
+    if( 숫자 ==1 || 숫자 == 0 ){
+        return 숫자.toString();
+    };
+    return 이진법(Math.floor( 숫자/2 )) + (숫자%2).toString() ;
+}
+console.log( 이진법(11) )
+```
+
+# 문자열 뒤집기
+```javascript
+
+let result = '';
+let x = "leejyori";
+x = x.split('');
+for( var i=x.length-1; i>=0 ; i--)
+{
+    result+= x[i];
+}
+console.log( `반복문(My) : ${result}`);
+
+function rever(name){
+    if( name.length == 1){
+        return name;
+    };
+    x = name[name.length-1]
+    name.pop();
+    
+    return x + rever(name)
+};
+
+console.log( `재귀함수(My) : ${rever( x )}` )
+
+let x2 = "leejyori";
+
+
+function 문자열역순(문자){
+    if( 문자.length == 1 ){
+        return 문자
+    };
+
+    return 문자[문자.length-1] + 문자열역순( 문자.slice(0 , 문자.length-1) ) ;
+};
+
+console.log( `문자열 역순 ${문자열역순(x2)}` );
+```
+
+# 자릿수 더하기
+```javascript
+
+let result = 0;
+let x = '123123';
+
+while(true){
+    if(x.length == 1){
+        result += parseInt(x , 10 );
+        break;
+    };
+    let y = x.split('');
+    result+= parseInt( y.pop() , 10 );
+    x = y.join('');
+};
+console.log( `반복문 1: ${result}`)
+
+let result2 = 0;
+let x2 = '123123';
+x2 = x2.split('');
+
+for( var i=0; i<x2.length ; i++)
+{
+    result2 += parseInt(x2[i]);
+};
+console.log(`반복문 2: ${result2}`)
+
+var result3 = x2.reduce(function(a,b){
+    return parseInt(a)+parseInt(b);
+});
+console.log( `반복문 3: ${result3}`)
+
+
+function 자릿수합(str){
+    if(str.length == 1 ){
+        return parseInt(str);
+    };
+    x=str[0];
+    str.shift();
+    return parseInt( x ) + 자릿수합( str ) 
+};
+
+console.log( `재귀함수 1: ${자릿수합(x2)}` )
+
+function  자릿수합2(str){
+    if( str.length == 1){
+        return parseInt(str,10);
+    };
+    return parseInt( str[str.length-1] ) + 자릿수합2(  str.slice(0, str.length-1)  );
+}
+let x3 = '123123';
+console.log( `재귀함수 2: ${자릿수합2(x3)}` )
+```
+
+
+# 피보나치
+```javascript
+/*
+    1 1 2 3 5 8 13 21 34...
+*/
+
+let a = 1;
+let b = 1;
+
+for( var i=0 ; i < 5 ; i++){
+    let c = a+b;
+    a = b;
+    b = c;
+}
+console.log( `반복문 : ${a}` );
+
+function 피보나치(숫자){
+    if( 숫자==1 || 숫자==2){
+        return 1;
+    };
+
+    return 피보나치(숫자-1) + 피보나치(숫자-2)
+}
+console.log( 피보나치(6) )
+```
