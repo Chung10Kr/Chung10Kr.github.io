@@ -15,11 +15,11 @@ tags: ct
 
 # 고민....
 
-- 2차원 배열 기계에서 맨 위의 값들만 가져가서 계산해야함
+- 2차원 배열 기계에서 맨 위의 값들만 가져와서 계산해야함
 - 맨 위의 값들을 가져오기 힘드니깐 90도 회전해서 맨 앞의 값들만 빼오면 쉬울듯
 
 
-
+# 내 풀이
 
 
 ```javascript
@@ -61,6 +61,9 @@ function solution(board, moves) {
             if( arr > 0 ) return arr;
         })
     }).reverse();
+    //----여기까지 옆으로 눕히고 0 제거
+
+
 
     var barket = [];
     var bom_cnt = 0;
@@ -74,7 +77,6 @@ function solution(board, moves) {
        
        //인형 뽑아서
        var doll =  rotate_board[  point ][0];
-       
        
        if( barket[barket.length-1]  == doll  ){
            // 이전의 인형과 같으면 ++
@@ -93,5 +95,41 @@ function solution(board, moves) {
     
 
 }
+
+```
+
+
+
+## 다른사람 풀이
+```javascript
+
+ //옆으로 눕히고 0 제거 
+const transpose = matrix =>
+    matrix.reduce(
+        (result, row) => row.map((_, i) => [...(result[i] || []), row[i]]),
+        []
+    );
+
+const solution = (board, moves) => {
+    const stacks = transpose(board).map(row =>
+        row.reverse().filter(el => el !== 0)
+    );
+    
+    const basket = [];
+    let result = 0;
+
+    for (const move of moves) {
+        const pop = stacks[move - 1].pop();
+        if (!pop) continue;
+        if (pop === basket[basket.length - 1]) {
+            basket.pop();
+            result += 2;
+            continue;
+        }
+        basket.push(pop);
+    }
+
+    return result;
+};
 
 ```
