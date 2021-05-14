@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "[코딩 테스트] 소수 만들기 -개인저장용-"
+subtitle:   ""
+categories: dev
+tags: ct
+--- 
+
+이제 시작했으니 쉬운것부터 천천히 가자..
+
+# 문제 설명 
+
+문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/12977) 에서 확인
+
+
+# 고민....
+
+- 소수 체크하는 함수를 따로 구현 필요,
+- 시작위치 잘 체크 필요
+
+
+
+# 내 풀이
+
+
+```javascript
+
+var a = [1,2,3,4];
+
+console.log( solution(a) )
+
+function solution(nums) {
+    var answer = -1;
+    
+    var cnt = 0
+    var num = 0;
+    
+    for( var i=0 ; i<nums.length-2 ; i++ ){ //0부터 시작
+        for( var z= i+1 ; z<nums.length-1 ; z++){ //첫번째의 다음번쨰부터 시작이니 +1
+            for( var y=z+1 ; y<nums.length; y++){  //두번째의 다음번쨰 시작이니 두번쨰+1
+                num = nums[i]+nums[z]+nums[y]
+                if( isPrime( num )) cnt++
+            }
+        }
+    }
+    return cnt;
+}
+
+// 소수 체크
+function isPrime(num){
+    if( num == 2) return false;
+    for(var i=2; i*i<=num; i++){
+        if(num % i == 0) return false;
+    }
+    return true;
+}
+
+```
+
+
+
+## 다른사람 풀이
+
+너무 쉽고 내 풀이랑 똑같아서 생략
