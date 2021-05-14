@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[코딩 테스트] 소수 만들기 -개인저장용-"
+title:  "[코딩 테스트] 소수 만들기 , 내적 , 신규아이디 추천-개인저장용-"
 subtitle:   ""
 categories: dev
 tags: ct
@@ -8,7 +8,7 @@ tags: ct
 
 이제 시작했으니 쉬운것부터 천천히 가자..
 
-# 문제 설명 
+# 문제 - 1 설명 
 
 문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/12977) 에서 확인
 
@@ -62,3 +62,68 @@ function isPrime(num){
 ## 다른사람 풀이
 
 너무 쉽고 내 풀이랑 똑같아서 생략
+
+
+
+
+
+
+
+
+# 문제 - 2 설명 
+
+문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/70128) 에서 확인
+
+# 고민 없음
+
+# 내풀이
+```javascript
+
+function solution1(a,b) {
+    
+    return a.map(function(data , index){
+        return data * b[index]
+    }).reduce(function(a,b,index){
+        return a+b;
+    })
+    //처음에는 이렇게 풀었다가 굳이 2번이나 할 필요 없어서...solution2()
+}
+
+function solution2(a,b) {
+        
+    return a.reduce(function(sum,data,index){
+        sum+= data * b[index];
+        return sum
+    },0)
+    
+}
+
+
+
+```
+
+# 문제 - 3 설명 
+
+문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/72410?language=javascript) 에서 확인
+
+# 고민 없음
+- 정규식으로 하면 간단.
+
+# 내풀이
+```javascript
+
+function solution(new_id) {
+    
+    const answer = new_id
+        .toLowerCase() // 1
+        .replace(/[^\w-_.]/g, '') // 2
+        .replace(/\.{2,}/g, '.') // 3
+        .replace(/^\.|\.$/g, '') // 4
+        .replace(/^$/, 'a') // 5
+        .slice(0, 15).replace(/\.$/, ''); // 6
+    const len = answer.length;
+    return len > 2 ? answer : answer + answer.charAt(len - 1).repeat(3 - len); // 7
+    
+    
+}
+```
