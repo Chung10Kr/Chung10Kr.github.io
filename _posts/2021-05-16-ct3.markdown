@@ -1,0 +1,156 @@
+---
+layout: post
+title:  "[코딩 테스트] 3진법 뒤집기등 -개인저장용-"
+subtitle:   ""
+categories: dev
+tags: ct
+--- 
+
+
+
+
+# 3진법 뒤집기
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/68935?language=javascript)
+
+
+# 내 풀이
+
+```javascript
+function solution(n) {
+    return parseInt(n.toString(3).split('').reverse().join(''),3)
+}
+```
+
+---------------------------------------
+
+# 두개 뽑아서 더하기
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/68644?language=javascript)
+
+
+# 내 풀이
+
+```javascript
+
+function solution(numbers) {
+    var answer = [];
+    
+    for( var i=0 ; i<numbers.length-1 ; i++){
+        for( var y=i+1 ; y<numbers.length ; y++){
+            if( answer.indexOf( numbers[i]+numbers[y] ) == -1){
+                answer.push( numbers[i]+numbers[y] );    
+            }
+            
+        }
+    }
+    answer = answer.sort(function(a,b){
+        return a-b
+    });
+
+    return answer;
+}
+
+```
+# 모든 풀이
+```javascript
+function solution(numbers) {
+    const temp = []
+
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = i + 1; j < numbers.length; j++) {
+            temp.push(numbers[i] + numbers[j])
+        }
+    }
+
+    const answer = [...new Set(temp)]
+
+    return answer.sort((a, b) => a - b)
+}
+
+```
+
+
+
+---------------------------------------
+
+# 2016년 요일 구하기
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/12901)
+
+# 내풀이
+```javascript
+
+function solution(a, b) {
+     var answer = '';
+    
+     let day = new Date(`2016-${a}-${b}`);
+     const WEEKDAY = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+     let week = WEEKDAY[day.getDay()];
+    
+      return week;
+};
+
+```
+
+
+---------------------------------------
+
+# 가운데 글자 가져오기
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/12903)
+
+# 내풀이
+```javascript
+function solution(s) {
+   var answer = '';
+   var center = Math.ceil( (s.length/2)-1 );
+    if( s.length%2==0){
+        answer = s.substring( center , center+2 )
+    }else{
+        answer = s.substring( center , center+1 )
+    }
+    return answer;
+}
+
+```
+
+
+---------------------------------------
+
+# 1차 비밀지도
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/17681)
+
+# 내풀이
+```javascript
+/*
+처음에는 이렇게 풀었지만 굳이 01001을 또 짤라서 비교햘 필요 없어서
+solution2으로 다시
+*/
+function solution1(n, arr1, arr2) {
+    arr1 = arr1.map(function(data){
+        return (data.toString(2)).padStart(n,0).split('')
+    })
+    arr2 = arr2.map(function(data){
+        return (data.toString(2)).padStart(n,0).split('')
+    })
+    var onepice;
+    onepice = arr1.map(function(data,index){
+        return data.map(function( num , idx ){
+            return Math.max( num , arr2[index][idx] ) == 1 ? "#" : " "; 
+        }).join('')
+    });
+    return onepice;
+}
+
+/*
+다시 품
+*/
+function solution2(n, arr1, arr2) {
+    return arr1.map(function(data , index ){
+        return (data|arr2[index]).toString(2).padStart(n,0).replace(/0/g,' ').replace(/1/g,'#')
+    })
+}
+
+```
