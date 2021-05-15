@@ -1,0 +1,200 @@
+---
+layout: post
+title:  "[코딩 테스트] 약수의 개수와 덧셈등 -개인저장용-"
+subtitle:   ""
+categories: dev
+tags: ct
+--- 
+
+
+
+# 문제 - 약수의 개수 
+
+문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/77884) 에서 확인
+
+
+# 고민....
+
+- 없음, 난이도 1짜리
+
+
+
+# 내 풀이
+
+
+```javascript
+
+function solution(left, right) {
+    var cnt = 0;
+    
+    for( var i = left; i <= right ; i++){
+        getN(i)%2 == 0 ? cnt+=i : cnt-=i;
+    }
+    return cnt;
+};
+// 약수 갯수 구하기
+function getN(num){
+    var cnt = 0;
+    for( var i=1 ; i<= num ; i++){
+        if( num % i == 0){
+            cnt++
+        } 
+    }
+    return cnt;
+}
+```
+
+
+
+## 다른사람 풀이
+
+너무 쉬워서 생략
+
+
+
+---------------------------------------
+
+
+
+# 문제 - 음양더하기 
+
+문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/76501?language=javascript) 에서 확인
+
+# 고민 없음
+- 난이도 1짜리는 그냥 빨리빨리 치고 나가자.
+
+
+# 내풀이
+```javascript
+function solution(absolutes, signs) {
+    return absolutes.reduce(function(sum,data,index){
+        return sum+= signs[index] ? data : data*-1; 
+    },0);
+}
+```
+
+---------------------------------------
+
+# 문제 - 예산
+
+문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/12982?language=javascript) 에서 확인
+
+# 고민 없음
+
+
+# 내풀이
+```javascript
+
+function solution(d, budget) {
+    var result=0;
+
+    d.sort(function(a,b){
+        return a-b;
+    })
+
+    var tnt=0;
+    for( var i=0; i<d.length ; i++ ){
+        if( d[i] > budget-tnt ) break;
+        if( budget >= tnt ) tnt+=d[i];
+        result++
+    };
+    return result;
+}
+```
+
+
+---------------------------------------
+
+
+# 문제 - 4 로또의 최고 순위와 최저 순위
+
+문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/77484) 에서 확인
+
+# 고민 없음
+
+
+# 내풀이
+```javascript
+
+function solution(lottos,win_nums) {
+    
+    var congratulation = 0;
+    var cnt_0 = 0;
+
+    lottos.map(function(data){
+        if( win_nums.indexOf(data) > -1 ) congratulation++;
+        if( data == 0) cnt_0++;
+    })
+
+    var max = getLank(congratulation+cnt_0);
+    var min = getLank(congratulation) ;
+    console.log( congratulation+cnt_0 + "  " + congratulation)
+    console.log(max + "   " + min )
+    return [  max , min ];
+    
+}
+
+function getLank(num){
+    if( num == 1 ) return 6;
+    if( num == 2 ) return 5;
+    if( num == 3 ) return 4;
+    if( num == 4 ) return 3;
+    if( num == 5 ) return 2;
+    if( num == 6 ) return 1;
+    return 6;
+}
+
+```
+
+
+---------------------------------------
+
+
+# 문제 - 4 실패율
+
+문제는 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/42889) 에서 확인
+
+# 고민 없음
+
+
+# 내풀이
+```javascript
+
+
+
+function solution(N, stages) {
+    var answer = [];
+    
+    var arriv = new Array(N).fill(0);
+    var fail  = new Array(N).fill(0);
+    
+    stages.map(function(data){
+        for( var i=1 ; i<=N ; i++){
+            if( data >= i ){
+                arriv[i-1]++;
+            }
+            if( data == i){
+                fail[i-1]++;
+                break;
+            } 
+        }    
+    });
+    
+    var fail_rate = arriv.map(function(data,index){
+        console.log( fail[index] + " " + data )
+        return (fail[index] / data) || 0 ;
+    })
+    
+    var topFail;
+    for( var i=0 ; i<fail_rate.length ;i++){
+        topFail =  Math.max.apply(null,fail_rate)
+        answer.push( fail_rate.indexOf(topFail)+1 );
+        fail_rate[fail_rate.indexOf(topFail)]=-1;
+    }
+    return answer;
+}
+
+
+```
+
+
