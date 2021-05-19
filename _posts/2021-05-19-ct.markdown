@@ -347,5 +347,22 @@ function solution(s) {
 
 ```
 
+---------------------------------------
 
 
+# 자릿수 더하기
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/12931?language=javascript)
+
+# 내 풀이
+
+```javascript
+
+function solution(n)
+{
+    return (n+'').split('').reduce(function(a,b){
+        return (a/1)+(b/1);
+    })/1;
+}
+
+```
