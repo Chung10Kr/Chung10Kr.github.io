@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "[코딩 테스트] 자연수 뒤집어 배열로 만들기 등 -개인저장용-"
+subtitle:   ""
+categories: dev
+tags: ct
+--- 
+
+
+
+
+# 자연수 뒤집어 배열로 만들기
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/12932?language=javascript)
+
+# 내 풀이
+
+```javascript
+function solution(n) {
+    return (n+"").split("").map(function(data){
+        return data/1
+    }).reverse();
+}
+
+```
+
+
+---------------------------------------
+# 정수 내림차순으로 배치하기
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/12933?language=javascript)
+
+# 내 풀이
+
+```javascript
+function solution(n) {
+    var answer = 0;
+    return (n+"").split('').sort(function(a,b){
+        return b-a
+    }).join('')/1;
+}
+
+```
+
+---------------------------------------
+# 정수 제곱근 판벌
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/12934)
+
+# 내 풀이
+
+```javascript
+function solution(n) {
+    var answer = 0;
+
+    var root = Math.sqrt(n); //ㅋㅋㅋ루트
+    //정수 제곱근 판별 , 음수 판별
+    if( root%1 == 0 && root*-1 <0){
+        return Math.pow(root+1 , 2)
+    }else{
+        return -1
+    }
+
+}
+```
+
+
+---------------------------------------
+# 제일 작은 수 제거하기
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/12935?language=javascript)
+
+# 내 풀이
+
+```javascript
+function solution(arr) {
+    var answer = [];
+    var min = Math.min.apply(null,arr);
+    arr.splice(   arr.indexOf(min) , 1   );
+    return arr.length === 0 ? [-1] : arr ;
+}
+```
+
+
+
