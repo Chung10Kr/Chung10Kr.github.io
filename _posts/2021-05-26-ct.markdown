@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "[코딩 테스트] 오픈채팅방  -개인저장용-"
+subtitle:   ""
+categories: dev
+tags: ct
+--- 
+
+
+# 오픈채팅방
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/42888?language=javascript)
+
+# 고민많음.
+
+
+# 내 풀이
+
+```javascript
+function solution(record) {
+    var answer = [];
+    
+    var user_table = {}
+    record.map(function(data){
+        data = data.split(" ");
+        if( data[0] == "Leave" ) return;
+        user_table[ data[1] ] = data[2];
+    });
+    var act;
+    var nm;
+    
+    record.map(function(data){
+        data = data.split(" ");
+
+        if( data[0] == "Enter" ) act="들어왔습니다.";
+        if( data[0] == "Leave" ) act="나갔습니다.";
+        if( data[0] == "Change" ) return;
+        nm = user_table[ data[1] ];
+        answer.push( `${nm}님이 ${act}` )
+    });
+    return answer;
+}
+```
