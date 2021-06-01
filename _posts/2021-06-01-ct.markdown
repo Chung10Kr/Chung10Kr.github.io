@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "올바른 괄호   -개인저장용-"
+subtitle:   ""
+categories: dev
+tags: ct
+--- 
+
+
+# 올바른 괄호
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/12909?language=javascript)
+
+# 내풀이 1
+```javascript
+function solution(s){
+    var answer = true;
+    s = s.replace(/ /g,'');
+    while(true){
+        s = s.replace(/\(\)/,"");
+        if( s.length <= 2) break;
+    }
+    return ( s == '()'  || s == "" );
+}
+/*
+테스트케이스는 전부 통과하지만 
+효율성테스트에 통과하지 못했다.
+아마 while때문인것 같다.
+*/
+```
+
+# 내풀이 2
+
+가만 생각해보니 앞에서부터 하나씩 뺴와서 앞에꺼랑 뒤에께 ()이면 사라진다......
+
+
+이거 완전 스택이다.
+
+```javascript
+function solution(s){
+    
+    var answer=[]
+    s = s.replace(/ /g,''); //공백제거
+    for( var i=0; i<s.length; i++){
+        
+        if( answer.length == 0 ){
+            answer.push( s[i] );
+            continue;
+        };
+        if( answer[answer.length-1] == "(" && s[i]==")" ){
+            answer.pop(); // () 된다면 마지막꺼 뺴주고 
+            continue;
+        };
+        if( answer[answer.length-1] == "(" && s[i]==")" ){
+            answer.pop(); // () 된다면 마지막꺼 뺴주고
+            continue;
+        };
+        answer.push( s[i] );
+    };
+    return answer.length != 0 ? false : true;
+}
+```
