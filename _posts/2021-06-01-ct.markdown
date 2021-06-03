@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "올바른 괄호   -개인저장용-"
+title:  "올바른 괄호 , 구명보트  -개인저장용-"
 subtitle:   ""
 categories: dev
 tags: ct
@@ -57,5 +57,58 @@ function solution(s){
         answer.push( s[i] );
     };
     return answer.length != 0 ? false : true;
+}
+```
+
+
+# 구명보트
+
+[문제 설명](https://programmers.co.kr/learn/courses/30/lessons/42885)
+
+# 고민
+
+처음 문제를 해결 풀때.. 가장 적게 구명보트를 이용하는걸로 생각을 해서
+
+[40,40,50,60,70] 의 limit가 150이라고 하면 [40,40,50],[60,70] 이런식으로 
+
+하나의 구명보트의 2명 이상을 태우려고 했다. 
+
+그렇게 한참 씨름을 하다 문제를 다시 읽어보니 **최대 2명** ...
+
+나는 언제나 마음만 급하고, 빨리 끝내고 배그나 할 생각만 하니깐..이렇게 실수를 한다.
+
+
+
+
+# 내풀이
+
+
+
+```javascript
+
+function solution(people, limit) {
+    var answer = 0;
+
+    //사람배열 을 정렬한다 
+    people.sort(function(a,b){
+        return b-a;
+    });
+    
+    var start=0;
+    var end=people.length;
+    while(start<end){
+        // 맨 앞의값과 맨 뒤의값을 더해서 한도초과하는지 확인 
+        if( people[start] + people[end] > limit ){
+            start++;
+        }else{
+            start++;
+            end--;
+        };
+        // 구명보트 하나 떠남
+        answer++;
+        if( start == end  ) answer++;
+    }
+    
+    return answer;
 }
 ```
