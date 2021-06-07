@@ -1,0 +1,71 @@
+---
+layout: post
+title:  "BFS 너비 우선 탐색 - 게임 맵 최단거리"
+subtitle:   ""
+categories: dev
+tags: ct
+--- 
+# 게임 맵 최단거리
+
+- 미로의 시작점에서 목적지까지 **최단 거리**를 구하는 문제
+- 전형적인 BFS(너비 우선 탐색)
+- 완전탐색 -> 전체적으로 모든 정보를 탐색
+- 특정위치에 있을때 다음 위치로 는 4가지 경우의 수가 있다( 동서남북 )
+- BFS,DFS는 한꺼번에 여러 값이 움직이기 떄문에 복잡 하다 그러나
+  규칙을 생각하고 종료 조건을 잘 세워 두기만 하면 된다.
+
+
+# 규칙
+- 네방향으로 한 칸씩 이동
+- 이동한 후에는 현재 값++
+- 벽, 왔던길은 못감
+- 목적지 도달하면 종료
+
+
+
+# 내풀이
+```javascript
+
+
+function solution(maps) {
+    let answer = 1;
+    const visited = maps;
+    const queue = [];
+    const directX = [-1, 1, 0, 0];
+    const directY = [0, 0, -1, 1];
+    const n = maps.length;
+    const m = maps[0].length;
+
+    queue.push( [0,0] ); //출발지
+    visited[0][0] = 0;
+    
+    while(queue.length > 0){
+        const size = queue.length;
+        
+        for(let i = 0; i < size; i++){
+            const [x, y] = queue.shift();
+            
+            for(let j = 0; j < 4; j++){ //4 방향으로 한번씩 다 해봄
+                const nx = x + directX[j];
+                const ny = y + directY[j];
+                
+                
+                if(nx >= 0 && nx < n && ny >= 0 && ny < m && visited[nx][ny] === 1){
+                //4 방향으로 한번씩 다 해봐서 멀쩡한값이랑 벽이 아닌값 체크     
+                    if(nx == 4 && ny == 4){ // 목적지
+                        return ++answer;
+                    }
+                    
+                    queue.push([nx, ny]);
+                    visited[nx][ny] = 0;
+                }
+            }    
+        }
+        answer++;
+    }
+    
+    return -1;
+}
+
+```
+
