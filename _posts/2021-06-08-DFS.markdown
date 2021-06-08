@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "DFS 깊이 우선 탐색 - 타켓넘버 (개인저장용)"
+subtitle:   ""
+categories: dev
+tags: ct
+--- 
+
+# 타켓 넘버
+
+![img](https://chung10kr.github.io/assets/img/2021-06-08-2.PNG)
+
+
+# 규칙
+
+DFS는 스택, BFS는 큐를 이용하여 문제를 푼다는것을 보고
+
+재귀함수를 사용하지 않고 스택으로 어떻게던 완전탐색해보려고 했는데 결국에 실패
+
+결국에 재귀함수로 풀었는데
+
+설명은 아래 사진
+
+
+![img](https://chung10kr.github.io/assets/img/2021-06-08-1.PNG)
+
+
+
+# 내풀이
+```javascript
+
+function solution(numbers, target){
+    let answer = 0;
+  
+    function dfs(depth, sum){
+      if (depth === numbers.length){
+        if (sum === target){
+          answer++;
+        }
+        return;
+      }
+      dfs(depth + 1, sum + numbers[depth]); // 왼쪽
+      dfs(depth + 1, sum - numbers[depth]); // 오른쪽
+    }
+    dfs(0, 0);
+    return answer;
+}
+
+```
+
