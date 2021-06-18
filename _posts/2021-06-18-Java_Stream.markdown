@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "자바 스트립이란? 1편"
+title:  "자바 스트립이란? - 개인저장용"
 subtitle:   ""
 categories: dev
 tags: java
@@ -57,10 +57,23 @@ Stream을 사용해서 Arrays.stream(배열명).boxed()로 스트림 생성 .dis
 스트림은 선언,가공,반환 세 부분으로 이루어진다.
 
 ## 선언 - 배열,컬렉션(list,set,map) 등을 스트림 형태로 만들기
+
 ## 가공 - 스트림을 필요한 형태로 가공하기
+
 ## 반환 - 가공한 값을 원하는 형태로 가져오기
 
 
+--작성중
+
+
+
+
+
+
 [참고 - blog](https://wakestand.tistory.com/419)
+
+
 [참고 - blog](https://futurecreator.github.io/2018/08/26/java-8-streams/)
+
+
 [참고 - blog](http://tcpschool.com/java/java_io_stream)
