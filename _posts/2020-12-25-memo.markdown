@@ -16,13 +16,8 @@ categories: memo
 - 깊이우선탐색
 - 자바스크립트 깊은복사 얕은 복사
 - 동적계획법, 유클리드호제등 다 정리해서 하나 페이지로
-
-
-### 개인메모
-
-- [한성 무접점](http://www.11st.co.kr/products/2907612989?utm_medium=%EA%B2%80%EC%83%89&gclid=Cj0KCQjw1PSDBhDbARIsAPeTqrdmVuIEaHOLrCjHe31aD6gLDDjlGQKMcozw-BoZUECm2612bSLJBe0aAn1qEALw_wcB&utm_source=%EA%B5%AC%EA%B8%80_PC_S_%EC%87%BC%ED%95%91&utm_campaign=%EA%B5%AC%EA%B8%80%EC%87%BC%ED%95%91PC+%EC%B6%94%EA%B0%80%EC%9E%91%EC%97%85&utm_term=)  
-
-
+- 스트림
+- 람다
 
 
 ### 알고리즘
