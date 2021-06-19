@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "자바 스트립이란? - 개인저장용"
+title:  "자바 스트림이란? - 개인저장용"
 subtitle:   ""
 categories: dev
 tags: java
