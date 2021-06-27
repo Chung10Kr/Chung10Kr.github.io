@@ -39,7 +39,7 @@ export JAVA_HOME
 export PATH
 ```
 
-3. vi편집기 저장 후 source명령어를 이용ㅇ해 환경변구 설정 적용함
+3. vi편집기 저장 후 source명령어를 이용해 환경변구 설정 적용함
 ```
 source .bash_profile
 ```
@@ -48,4 +48,14 @@ source .bash_profile
 ```
 echo $JAVA_HOME
 javac -version
+```
+
+5. Zsh에서 PATH기억시키기
+```
+//vi 에디터를 연다.
+vi ~/.zshrc
+
+// 작성
+source ~/.bash_profile
+
 ```
