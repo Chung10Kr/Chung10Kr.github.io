@@ -51,11 +51,11 @@ javac -version
 ```
 
 5. Zsh에서 PATH기억시키기
+
 ```
-//vi 에디터를 연다.
-vi ~/.zshrc
+
+vi ~/.zshrc 
 
 // 작성
 source ~/.bash_profile
-
 ```
