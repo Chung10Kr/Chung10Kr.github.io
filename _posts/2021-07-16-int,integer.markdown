@@ -8,17 +8,20 @@ tags: java
 
 ## Int, Integer
 
+
 |Int|Integer|
 |---|---|
 |primitive 자료형|Wrapper 클래스(객채)|
 |산술연산 가능|Unboxing을 하지 않으면 산순 연산이 불가능|
 |null로 초기화 할 수 없다.|null값을 처리할 수 있다.|
 
+
 ## Boxing, Unboxing
 
 |Boxing|Unboxing|
 |---|---|
 |Primitive 자료형 -> Wrapper 클래스 |Wrapper 클래스->Primitive 자료형|
+
 
 ```java
     //Int to Integer
