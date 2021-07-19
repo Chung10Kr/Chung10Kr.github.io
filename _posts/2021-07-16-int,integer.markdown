@@ -7,6 +7,7 @@ tags: java
 --- 
 
 ## Int, Integer
+
 |Int|Integer|
 |---|---|
 |primitive 자료형|Wrapper 클래스(객채)|
