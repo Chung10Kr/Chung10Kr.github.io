@@ -50,9 +50,9 @@ tags: java
 
 ![img](https://chung10kr.github.io/assets/img/2021-07-19-1.PNG)
 
->(번역하면, Autoboxing은 자바 컴파일러가 primitive형과 Wrapper 클래스 사이에서 만드는 자동 변환 입니다. 예를 들면 
->int 에서 Integer로 변환, dobble에서 Double로 변환, 기타 등등)
->
->int -> Integer 로 변환 (Auto boxing)
->Integer -> int 로 변환 ( Auto unboxing)
+(번역하면, Autoboxing은 자바 컴파일러가 primitive형과 Wrapper 클래스 사이에서 만드는 자동 변환 입니다. 예를 들면 
+int 에서 Integer로 변환, dobble에서 Double로 변환, 기타 등등)
+
+int -> Integer 로 변환 (Auto boxing)
+Integer -> int 로 변환 ( Auto unboxing)
 
