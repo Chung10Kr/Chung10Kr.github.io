@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "JNDI, JDBC, DBCP  - 개인저장용"
+subtitle:   ""
+categories: dev
+tags: etc
+--- 
+
+우리 과장님 이것도 몰라서 차장님한테 망신당함.
+
+알고 있지만 다시 한번 확인
+
+# Connection Pool, Datasource
+
+## Connection Pool
+- 실제 자바프로그램과 데이터베이스를 네트워크상에서 연결해주는 메소드
+- Connection을 웹 어플리케이션에서 이용하면 체계적인 관리가 힒듬
+- 불필요한 연결에 의한 서버 자원의 낭비가 발생
+
+-> Connection객체를 프로그램이 실행될 때마다 생성하는 것이 아니라 웹 어플리케이션이 서비스 되기 전에
+  **미리 생성하여 준비**한다음 필요할때마다 **준비된 connection을 가져다 사용**하는것으로 문제점 해결 가능
+
+  
+## Datasource
+- javax.sql.DataSource는 Connection Pool을 관리하는 목적으로 사용
+- 어플리케이션에서 DataSource인터페이스를 통해서 Connection을 얻어오고 반납하는 작업을 구현함
+
+
+
+# JDBC / DBCP / JNDI
+
+Java에서 DB connection을 맺을 때 사용
+
+
+# JDBC ( Java DataBase Connectivity )
+
+- Database Pool방식을 사용하지 않고 DB에서 정보를 가져올 때마다 DB연결을 열고 닫음
+- 속도저하, 효율 떨어짐 -> 운영서버에서 사용되는 경우는 거의 없다.
+
+# DBCP ( DataBase Connection Pool)
+- 어플리케이션 시작시 필요한 만큼 Connection객체를 만들어 Pool에 넣어둠
+- 필요할 때마다 갖다 쓰고 Pool에 반납
+- 어플리케이션 소스단에 설정
+
+# JNDI (Java Naming and Directory Interface)
+- Was단에 커넥션 객체를 미리 네이밍 해두는 방식
+- Was에서 네이밍된 커넥션 풀을 가져와서 사용
+- DB커넥션을 Was단에서 제어하면서 서버에서 하나의 커넥션 풀을 가짐( Was의 어플리케이션들이 커넥션 풀을 공유)
+- 어플리케이션이 DB에 직접 커넥션을 요청하는것이 아니라 JNDI lookupo을 통해 datasource객체를 획득하고 커넥션 요청
+- DB커넥션 풀을 효율적으로 사용가능하고 DB설정 정보 파악이 쉽다.
+
+![img](https://chung10kr.github.io/assets/img/2021-07-20-1.PNG)
+
+
+
+[참고 - blog](https://jjjayyy.tistory.com/16)

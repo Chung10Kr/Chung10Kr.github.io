@@ -12,13 +12,6 @@ categories: memo
 [RN 아이콘](https://oblador.github.io/react-native-vector-icons/)
 
 
-### 할거
-- 자바스크립트 깊은복사 얕은 복사
-- 스트림
-- 람다
-- 제네릭
+[PPT 이미지 가져오기](https://www.miricanvas.com/design)
 
 
-### 알고리즘
-
-![img](https://chung10kr.github.io/assets/img/2021-04-25-1.PNG)
