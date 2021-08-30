@@ -10,8 +10,6 @@ categories: memo
 ### 좋은사이트
 
 [RN 아이콘](https://oblador.github.io/react-native-vector-icons/)
-
-
 [PPT 이미지 가져오기](https://www.miricanvas.com/design)
-
+[이미지에서 글자,특정 이미지 지우기](https://theinpaint.com)
 
