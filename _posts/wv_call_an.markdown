@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "[Android] 웹뷰에서 안드로이드 호출 "
+subtitle:   ""
+categories: dev
+tags: error
+--- 
+
+
+웹뷰 작업중 웹뷰에서 안드로이드를 콜해야하는 상황이 필요해서 기록으로 저장
+
+
+```JAVA
+    //android
+
+    mWebSettings.setJavaScriptEnabled(true); // 웹페이지 자바스크립트 허용 여부
+    mWebView.addJavascriptInterface(new webViewInterface(this),"Android");
+
+
+    //JavascriptInterface 함수 생성
+    public class webViewInterface{
+        private Context mContext;
+        public webViewInterface(Context mContext) {
+            this.mContext = mContext;
+        };
+        @JavascriptInterface
+        public void showToast(String msg){
+            Toast.makeText(webViewActivity.this, msg, Toast.LENGTH_SHORT).show();
+        };
+    };
+
+```
+
+```JAVASCRIPT
+    //webView
+
+    function androidCall(){
+      Android.showToast("웹뷰에서 메세지를 보냈숩니다. ㅎㅎ")
+    };
+    
+```
