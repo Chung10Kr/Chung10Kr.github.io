@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "완전탐색 카펫"
+title:  "[etc] 완전탐색 카펫"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 # 카펫

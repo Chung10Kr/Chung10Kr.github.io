@@ -3,7 +3,7 @@ layout: post
 title:  "[JAVA] Servlet "
 subtitle:   "servlet"
 categories: dev
-tags: lang
+tags: note
 ---
 
 

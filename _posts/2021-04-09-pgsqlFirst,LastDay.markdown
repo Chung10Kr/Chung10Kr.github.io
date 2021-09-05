@@ -3,7 +3,7 @@ layout: post
 title:  "[PostgreSQL] 이번달의 첫번째 날과 마지막날 구하기 "
 subtitle:   "firstday , lastday "
 categories: dev
-tags: db
+tags: note
 ---
 
 

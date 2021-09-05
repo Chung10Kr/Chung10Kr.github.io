@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "배열 회전"
+title:  "[etc] 배열 회전"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

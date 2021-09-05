@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "SCR , CSR , SPA "
+title:  "[etc] SCR , CSR , SPA "
 subtitle:   "서버 사이드 랜더링"
 categories: dev
-tags: etc
+tags: note
 --- 
 
 코드 팩토리님의 영상을 개인 메모용으로 정리

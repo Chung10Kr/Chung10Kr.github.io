@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "네이버 Sens SMS API로 문자 보내기"
+title:  "[etc] 네이버 Sens SMS API로 문자 보내기"
 subtitle:   "Sens SMS API"
 categories: dev
-tags: etc
+tags: note
 ---
 
 [네이버 클라우드 플랫폼](https://www.ncloud.com/) 에서 제공하는 Sens SMS API를 사용해서 SMS 보내기

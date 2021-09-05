@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  " 앵커태그 href와 버튼에서의 onclick의 올바른 사용법은?"
+title:  "[HTML] 앵커태그 href와 버튼에서의 onclick의 올바른 사용법은?"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 프로젝트 진행중 버튼태그에 대한 표준을 잡아주지 않으면 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "약수의 개수와 덧셈 등"
+title:  "[etc] 약수의 개수와 덧셈 등"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

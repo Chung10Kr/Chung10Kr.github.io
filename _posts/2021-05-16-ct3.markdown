@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "3진법 뒤집기등"
+title:  "[etc] 3진법 뒤집기등"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

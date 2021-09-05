@@ -3,7 +3,7 @@ layout: post
 title:  "[JAVA] Integer VS int"
 subtitle:   ""
 categories: dev
-tags: lang
+tags: note
 --- 
 
 ## Int, Integer

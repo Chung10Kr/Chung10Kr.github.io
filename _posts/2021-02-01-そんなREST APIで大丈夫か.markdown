@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "그런 REST API로 괜찮은가"
+title:  "[etc] 그런 REST API로 괜찮은가"
 subtitle:   "그런 REST API로 괜찮은가?"
 categories: dev
-tags: etc
+tags: note
 ---
 
 유투브에서 [그런 REST API로 괜찮은가](https://www.youtube.com/watch?v=RP_f5dMoHFc)의 발표를 봤다.

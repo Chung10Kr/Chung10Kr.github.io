@@ -3,7 +3,7 @@ layout: post
 title:  "[etc] 동기 비동기 설명 이미지 샘플"
 subtitle:   "동기화 비동기화 샘플 이미지"
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

@@ -3,7 +3,7 @@ layout: post
 title:  "[Node] Node.js - 키보드 입력시키기"
 subtitle:   "node-key-sender npm 사용"
 categories: dev
-tags: lang
+tags: note
 ---
 물리적 키보드 입력과 같은 동작시키기!
 

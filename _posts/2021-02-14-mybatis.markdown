@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Mybatis #,$ 차이"
+title:  "[Mybatis] Mybatis #,$ 차이"
 subtitle:   "나의 batis"
 categories: dev
-tags: etc
+tags: note
 ---
 
 시큐어코딩중 ${} 문법을 #{}로 변경하라는 보안조치가 내려왔다.

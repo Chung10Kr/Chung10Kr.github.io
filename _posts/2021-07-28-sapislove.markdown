@@ -3,7 +3,7 @@ layout: post
 title:  "[etc] SAP"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

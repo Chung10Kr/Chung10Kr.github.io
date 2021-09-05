@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "vscode + Spring Boot + mac 개발환경 셋팅하기"
+title:  "[mac] vscode + Spring Boot + mac 개발환경 셋팅하기"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 보통 스프링을 할때는 이클립스,인텔리,sts를 사용하는데

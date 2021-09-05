@@ -3,7 +3,7 @@ layout: post
 title:  "[JAVASCRIPT] input 합계 구하기 "
 subtitle:   ""
 categories: dev
-tags: lang
+tags: note
 --- 
 
 ### input 태그들의 합계 구하기.

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "DFS 깊이 우선 탐색 - 타켓넘버"
+title:  "[etc] DFS 깊이 우선 탐색 - 타켓넘버"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 # 타켓 넘버

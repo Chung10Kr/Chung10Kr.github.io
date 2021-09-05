@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "다트게임등"
+title:  "[etc] 다트게임등"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

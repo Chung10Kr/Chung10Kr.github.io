@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "최댓값,최솟값, 정렬"
+title:  "[etc] 최댓값,최솟값, 정렬"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 # 최댓값, 최솟값

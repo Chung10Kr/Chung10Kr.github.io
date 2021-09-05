@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "GET , POST"
+title:  "[etc] GET , POST"
 subtitle:   "GET POST"
 categories: dev
-tags: etc
+tags: note
 ---
 
 

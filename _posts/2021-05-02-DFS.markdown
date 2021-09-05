@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "DFS , BFS "
+title:  "[etc] DFS , BFS "
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 # DFS - 깊이 우선 탐색 -statck

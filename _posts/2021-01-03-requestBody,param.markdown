@@ -3,7 +3,7 @@ layout: post
 title:  "[spring] @RequestBody vs @RequestParam"
 subtitle:   "@RequestBody vs @RequestParam"
 categories: dev
-tags: lang
+tags: note
 ---
 
 이 전의 [GET , POST](https://chung10kr.github.io/dev/2021/01/02/get_post/) 포스팅 을 했었습니다.

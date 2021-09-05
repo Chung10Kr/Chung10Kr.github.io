@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "JNDI"
+title:  "[db] JNDI"
 subtitle:   "Java Naming and Directory Interface"
 categories: dev
-tags: etc
+tags: note
 ---
 
 JNDI -  Java Naming and Directory Interface

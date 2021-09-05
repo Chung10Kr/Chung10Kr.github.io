@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring Boot] 서버 인증하기!"
 subtitle:   "인증1탄"
 categories: dev
-tags: lang
+tags: note
 ---
 
 

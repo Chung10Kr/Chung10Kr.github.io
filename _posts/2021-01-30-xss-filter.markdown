@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring Boot]  XSS 처리 - Filter "
 subtitle:   "Filter VS Interceptor"
 categories: dev
-tags: lang
+tags: note
 ---
 
 Filter와 Interceptor의 차이 포스팅 Sample Code

@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring Boot] Jar 파일 만들고 실행"
 subtitle:   "Gradle + Spring Boot Jar 파일 만들고 실행하기"
 categories: dev
-tags: lang
+tags: note
 ---
 
 톰캣설치부터 이것저것 할 필요 없이 기본 Jar로 배포 해보자

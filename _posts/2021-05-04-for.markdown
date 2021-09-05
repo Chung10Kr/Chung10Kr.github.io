@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "재귀함수 test"
+title:  "[etc] 재귀함수 test"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[etc] JNDI, JDBC, DBCP"
+title:  "[DB] JNDI, JDBC, DBCP"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
  
 

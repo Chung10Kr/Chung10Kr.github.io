@@ -3,7 +3,7 @@ layout: post
 title:  "[MariaDB] 페이징 쿼리 "
 subtitle:   "페이징"
 categories: dev
-tags: db
+tags: note
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring Boot] 내장 톰캣 인코딩 문제"
 subtitle:   ""
 categories: dev
-tags: lang
+tags: error
 ---
 
 테스트 서버에 셋팅할때 Jar파일을 만들어 실행했다.

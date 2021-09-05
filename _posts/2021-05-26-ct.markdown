@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "오픈채팅방"
+title:  "[etc] 오픈채팅방"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

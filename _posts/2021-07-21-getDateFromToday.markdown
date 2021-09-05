@@ -3,7 +3,7 @@ layout: post
 title:  "[Javascript] 오늘부터 n일 이후의 날짜 구하기"
 subtitle:   ""
 categories: dev
-tags: lang
+tags: note
 --- 
 
 작업하다가 좋은거 하나 있어서 개인저장

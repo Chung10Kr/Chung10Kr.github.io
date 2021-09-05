@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "디자인 패턴"
+title:  "[etc] 디자인 패턴"
 subtitle:   "디자인패턴"
 categories: dev
-tags: etc
+tags: note
 ---
 
 디자인 패턴 - 객체 지향 프로그래밍 설계를 할 때 자주 발생하는 문제들을 피하기 위해 사용되는 패턴

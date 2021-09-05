@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring] DI , IOC 이란?"
 subtitle:   "DI"
 categories: dev
-tags: lang
+tags: note
 ---
 
 # DI

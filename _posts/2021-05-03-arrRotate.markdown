@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "페이지 교체 알고리즘"
+title:  "[etc] 페이지 교체 알고리즘"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 # FIFO (First In First Out)

@@ -3,7 +3,7 @@ layout: post
 title:  "[spring] @ModelAttribute"
 subtitle:   "@ModelAttribute"
 categories: dev
-tags: lang
+tags: note
 ---
 
 # @ModelAttribute

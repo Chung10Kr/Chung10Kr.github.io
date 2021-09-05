@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "문자열 내마음대로 등"
+title:  "[etc] 문자열 내마음대로 등"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

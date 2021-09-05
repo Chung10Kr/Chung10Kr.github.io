@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "BFS 너비 우선 탐색 - 게임 맵 최단거리"
+title:  "[etc] BFS 너비 우선 탐색 - 게임 맵 최단거리"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 # 게임 맵 최단거리
 

@@ -3,7 +3,7 @@ layout: post
 title:  "[etc] 샤오미 전기 난로 후기"
 subtitle:   "샤오미 전기 난로 후기"
 categories: tip
-tags: etc
+tags: note
 ---
 
 자취를 시작하고 첫겨울

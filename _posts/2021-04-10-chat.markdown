@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Firebase란"
+title:  "[server] Firebase란"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

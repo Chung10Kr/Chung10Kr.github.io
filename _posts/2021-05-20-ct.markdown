@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "자연수 뒤집어 배열로 만들기 등"
+title:  "[etc] 자연수 뒤집어 배열로 만들기 등"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

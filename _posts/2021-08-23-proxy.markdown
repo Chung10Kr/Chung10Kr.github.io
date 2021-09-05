@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[etc] PROXY"
+title:  "[server] PROXY"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

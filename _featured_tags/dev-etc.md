@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: Etc
-slug: etc
+title: Dev Note
+slug: note
 category: dev
 menu: false
 order: 2

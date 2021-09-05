@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "소수 만들기 , 내적 , 신규아이디 추천"
+title:  "[etc] 소수 만들기 , 내적 , 신규아이디 추천"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 이제 시작했으니 쉬운것부터 천천히 가자..

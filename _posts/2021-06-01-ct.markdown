@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "올바른 괄호 , 구명보트"
+title:  "[etc] 올바른 괄호 , 구명보트"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

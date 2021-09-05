@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "짝지어 제거하기"
+title:  "[etc] 짝지어 제거하기"
 subtitle:   ""
 categories: dev
-tags: etc
+tags: note
 --- 
 
 

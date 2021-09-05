@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring Boot] Filter와 Interceptor의 차이"
 subtitle:   "Filter VS Interceptor"
 categories: dev
-tags: lang
+tags: note
 ---
 
 
