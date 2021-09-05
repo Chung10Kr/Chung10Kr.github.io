@@ -10,7 +10,7 @@ tags: error
 웹뷰 작업중 웹뷰에서 안드로이드를 콜해야하는 상황이 필요해서 기록으로 저장
 
 
-```JAVA
+```java
     //android
 
     mWebSettings.setJavaScriptEnabled(true); // 웹페이지 자바스크립트 허용 여부
@@ -31,7 +31,7 @@ tags: error
 
 ```
 
-```JAVASCRIPT
+```javascript
     //webView
 
     function androidCall(){

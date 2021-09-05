@@ -15,7 +15,7 @@ tags: error
 
 
 
-```JAVA
+```java
 
 @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
