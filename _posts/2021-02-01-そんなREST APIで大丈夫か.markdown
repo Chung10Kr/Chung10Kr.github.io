@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[REST] 그런 REST API로 괜찮은가 정리"
+title:  "그런 REST API로 괜찮은가"
 subtitle:   "그런 REST API로 괜찮은가?"
 categories: dev
 tags: etc

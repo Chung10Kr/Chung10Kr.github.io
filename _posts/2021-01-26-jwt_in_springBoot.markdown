@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[spring boot] Spring Security + JWT with Spring Boot "
+title:  "[Spring Boot] Spring Security + JWT with Spring Boot "
 subtitle:   "인증2탄"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 서버기반인증 VS 토큰기반인증 에 이어서 JWT + Spring Security를 알아보장.

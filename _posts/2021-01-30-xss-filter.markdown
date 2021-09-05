@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[spring]  XSS 처리 - Filter "
+title:  "[Spring Boot]  XSS 처리 - Filter "
 subtitle:   "Filter VS Interceptor"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 Filter와 Interceptor의 차이 포스팅 Sample Code

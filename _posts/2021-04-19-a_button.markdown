@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[etc] 앵커에서의 onclick "
+title:  " 앵커태그 href와 버튼에서의 onclick의 올바른 사용법은?"
 subtitle:   ""
 categories: dev
 tags: etc

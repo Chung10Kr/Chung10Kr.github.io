@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "vscode + Spring Boot + mac 개발환경 셋팅하기  - 개인저장용"
+title:  "vscode + Spring Boot + mac 개발환경 셋팅하기"
 subtitle:   ""
 categories: dev
 tags: etc

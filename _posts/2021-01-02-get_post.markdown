@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Http method]  GET , POST"
+title:  "GET , POST"
 subtitle:   "GET POST"
 categories: dev
-tags: web
+tags: etc
 ---
 
 

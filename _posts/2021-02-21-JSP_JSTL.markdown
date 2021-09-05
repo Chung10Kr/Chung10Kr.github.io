@@ -3,7 +3,7 @@ layout: post
 title:  "[JAVA] JSP 동작원리"
 subtitle:   "JSP는 컴파일 언어일까?"
 categories: dev
-tags: java
+tags: lang
 ---
 
 [OKKY와 이런글이 올라왔었다.](https://okky.kr/article/395520)

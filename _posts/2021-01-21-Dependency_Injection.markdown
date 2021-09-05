@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[spring] DI , IOC 이란?"
+title:  "[Spring] DI , IOC 이란?"
 subtitle:   "DI"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 # DI

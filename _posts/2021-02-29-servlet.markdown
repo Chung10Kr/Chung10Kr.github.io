@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Java] Servlet "
+title:  "[JAVA] Servlet "
 subtitle:   "servlet"
 categories: dev
-tags: java
+tags: lang
 ---
 
 

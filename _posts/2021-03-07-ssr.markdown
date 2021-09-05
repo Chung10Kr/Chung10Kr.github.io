@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[WEB] SCR , CSR , SPA "
+title:  "SCR , CSR , SPA "
 subtitle:   "서버 사이드 랜더링"
 categories: dev
 tags: etc

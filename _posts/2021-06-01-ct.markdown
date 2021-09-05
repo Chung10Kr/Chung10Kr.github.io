@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "올바른 괄호 , 구명보트  -개인저장용-"
+title:  "올바른 괄호 , 구명보트"
 subtitle:   ""
 categories: dev
-tags: ct
+tags: etc
 --- 
 
 

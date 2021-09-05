@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "완전탐색    카펫  -개인저장용-"
+title:  "완전탐색 카펫"
 subtitle:   ""
 categories: dev
-tags: ct
+tags: etc
 --- 
 
 # 카펫

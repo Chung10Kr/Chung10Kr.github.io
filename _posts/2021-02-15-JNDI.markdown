@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[etc] JNDI"
+title:  "JNDI"
 subtitle:   "Java Naming and Directory Interface"
 categories: dev
 tags: etc

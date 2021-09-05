@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Integer VS int  - 개인저장용"
+title:  "[JAVA] Integer VS int"
 subtitle:   ""
 categories: dev
-tags: java
+tags: lang
 --- 
 
 ## Int, Integer

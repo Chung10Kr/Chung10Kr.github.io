@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[etc] 디자인 패턴"
+title:  "디자인 패턴"
 subtitle:   "디자인패턴"
 categories: dev
 tags: etc

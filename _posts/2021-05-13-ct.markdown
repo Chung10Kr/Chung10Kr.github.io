@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  " 크레인 인형뽑기 게임 -개인저장용-"
+title:  "크레인 인형뽑기 게임"
 subtitle:   ""
 categories: dev
-tags: ct
+tags: etc
 --- 
 
 

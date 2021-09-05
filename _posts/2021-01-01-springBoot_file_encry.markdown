@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring] 파일 암호화"
 subtitle:   "Spring 파일 암호화"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 어제 올린 포스팅한 파일 압로드 후 파일 암호화 필요.

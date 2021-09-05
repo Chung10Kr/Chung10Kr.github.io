@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "DFS 깊이 우선 탐색 - 타켓넘버 (개인저장용)"
+title:  "DFS 깊이 우선 탐색 - 타켓넘버"
 subtitle:   ""
 categories: dev
-tags: ct
+tags: etc
 --- 
 
 # 타켓 넘버

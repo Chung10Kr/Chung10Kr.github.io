@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[etc] Firebase란"
+title:  "Firebase란"
 subtitle:   ""
 categories: dev
 tags: etc

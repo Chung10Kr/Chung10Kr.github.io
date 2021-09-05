@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[etc] SAP  - 개인저장용"
+title:  "[etc] SAP"
 subtitle:   ""
 categories: dev
 tags: etc

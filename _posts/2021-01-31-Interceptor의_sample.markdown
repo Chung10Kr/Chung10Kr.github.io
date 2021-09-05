@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[spring] 관리자 권한 체크 - Interceptor"
+title:  "[Spring Boot] 관리자 권한 체크 - Interceptor"
 subtitle:   "Filter VS Interceptor"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 

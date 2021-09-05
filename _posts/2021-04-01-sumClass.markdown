@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[JAVASCRIPT & Jquery] input 합계 구하기 "
-subtitle:   "클래스로"
+title:  "[JAVASCRIPT] input 합계 구하기 "
+subtitle:   ""
 categories: dev
-tags: etc
+tags: lang
 --- 
 
 ### input 태그들의 합계 구하기.

@@ -3,7 +3,7 @@ layout: post
 title:  "[spring] Spring Bean 이란"
 subtitle:   "bean"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 [콩 삶아먹기](https://m.blog.naver.com/PostView.nhn?blogId=busykoala&logNo=220410074074&proxyReferer=https:%2F%2Fwww.google.com%2F)

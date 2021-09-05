@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[spring boot] 내장 톰캣 인코딩 문제"
-subtitle:   "삽질2시간"
+title:  "[Spring Boot] 내장 톰캣 인코딩 문제"
+subtitle:   ""
 categories: dev
-tags: spring
+tags: lang
 ---
 
 테스트 서버에 셋팅할때 Jar파일을 만들어 실행했다.

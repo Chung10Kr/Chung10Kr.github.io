@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[etc] 네이버 Sens SMS API로 문자 보내기"
+title:  "네이버 Sens SMS API로 문자 보내기"
 subtitle:   "Sens SMS API"
 categories: dev
 tags: etc

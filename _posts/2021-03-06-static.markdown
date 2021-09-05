@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring Boot] 외부 정적 리소스 처리하기"
 subtitle:   "정적 리소스 처리하기"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 파일업로드는 아마 기본적으로 모든 프로젝트에 구현 되어있을것이다.

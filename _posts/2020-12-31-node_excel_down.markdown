@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Node] Node.js - Excel Download With Template"
+title:  "[NodeJS] Node.js - Excel Download With Template"
 subtitle:   "Excel Download With Template"
 categories: dev
-tags: node
+tags: lang
 ---
 
 xls Template 사용하여 Excel download wirh Template

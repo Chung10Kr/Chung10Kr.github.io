@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[etc] 페이지 교체 알고리즘"
+title:  "페이지 교체 알고리즘"
 subtitle:   ""
 categories: dev
 tags: etc

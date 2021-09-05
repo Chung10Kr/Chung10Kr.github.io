@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[etc] DFS , BFS "
+title:  "DFS , BFS "
 subtitle:   ""
 categories: dev
 tags: etc

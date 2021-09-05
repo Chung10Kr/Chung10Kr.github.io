@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: ct
-slug: ct
+title: Language
+slug: lang
 category: dev
 menu: false
-order: 1
+order: 3
 ---

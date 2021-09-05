@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "mac jdk 설치 및 환경변수 설정 - 개인저장용"
+title:  "mac jdk 설치 및 환경변수 설정"
 subtitle:   ""
 categories: dev
 tags: etc

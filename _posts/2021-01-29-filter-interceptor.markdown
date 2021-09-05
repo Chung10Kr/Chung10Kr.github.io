@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[spring] Filter와 Interceptor의 차이"
+title:  "[Spring Boot] Filter와 Interceptor의 차이"
 subtitle:   "Filter VS Interceptor"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 

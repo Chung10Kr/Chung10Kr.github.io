@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "동적 계획법  -개인저장용-"
+title:  "동적 계획법"
 subtitle:   ""
 categories: dev
-tags: ct
+tags: etc
 --- 
 
 

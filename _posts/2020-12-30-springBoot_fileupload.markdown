@@ -3,7 +3,7 @@ layout: post
 title:  "[Spring Boot] MultipartFile 업로드"
 subtitle:   "Spring Boot MultipartFile 업로드"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 Spring Boot MultipartFile 업로드 및 Postman에서 MultipartFile Send하기!

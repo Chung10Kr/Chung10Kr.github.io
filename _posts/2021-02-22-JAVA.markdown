@@ -3,7 +3,7 @@ layout: post
 title:  "[JAVA] Java 컴파일 정리"
 subtitle:   "Java 컴파일 정리"
 categories: dev
-tags: java
+tags: lang
 ---
 
 지난번에 [JSP 컴파일](https://chung10kr.github.io/dev/2021/02/21/JSP/) 에 대해 포스팅했었다.

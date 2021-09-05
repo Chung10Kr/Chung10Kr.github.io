@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "최대공약수,최소공배수구하기 - 유클리드 호제법  -개인저장용-"
+title:  "최대공약수,최소공배수구하기 - 유클리드 호제법"
 subtitle:   ""
 categories: dev
-tags: ct
+tags: etc
 --- 
 
 

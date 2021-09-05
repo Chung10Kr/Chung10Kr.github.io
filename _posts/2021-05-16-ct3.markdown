@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[코딩 테스트] 3진법 뒤집기등 -개인저장용-"
+title:  "3진법 뒤집기등"
 subtitle:   ""
 categories: dev
-tags: ct
+tags: etc
 --- 
 
 

@@ -1,18 +1,12 @@
 ---
 layout: post
-title:  "[spring] 서버 인증하기!"
+title:  "[Spring Boot] 서버 인증하기!"
 subtitle:   "인증1탄"
 categories: dev
-tags: spring
+tags: lang
 ---
 
 
-
-언젠가 어머니 핸드폰에 깔려있는 악성 중극앱을 디컴파일하고 중국 서버 API를 통해
-
-
-
-중국 정부를 욕하는 자료를 반복 업로드를 하여 서버를 다운시켰다는 멋진 글을 읽은 적이 있다.
 
 
 [이상한거 하고 이상한거 만드시는 경기출신 일본 유학생님 트위터](https://twitter.com/dhlrunner/status/1266401822618443778)
