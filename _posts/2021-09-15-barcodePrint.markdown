@@ -9,7 +9,7 @@ tags: note
 IP, Print Name으로 zpl출력
 
 
-![img](https://chung10kr.github.io/assets/img/2021-09-15-1.PNG)
+![img](https://chung10kr.github.io/assets/img/2021-09-15-1.jpg)
 
 
-![img](https://chung10kr.github.io/assets/img/2021-09-15-2.PNG)
+![img](https://chung10kr.github.io/assets/img/2021-09-15-2.jpg)
