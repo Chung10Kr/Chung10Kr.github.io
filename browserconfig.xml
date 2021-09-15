@@ -3,10 +3,10 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square70x70logo src="tile.png"/>
-            <square150x150logo src="tile.png"/>
-            <wide310x150logo src="tile-wide.png"/>
-            <square310x310logo src="tile.png"/>
+            <square70x70logo src="tile2.GIF"/>
+            <square150x150logo src="tile2.GIF"/>
+            <wide310x150logo src="tile-wide2.GIF"/>
+            <square310x310logo src="tile2.GIF"/>
         </tile>
     </msapplication>
 </browserconfig>
