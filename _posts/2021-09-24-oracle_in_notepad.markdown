@@ -1,11 +1,11 @@
-
 ---
 layout: post
-title:  "[NotePad] NotePad++에서 PL/SQL 작성 및 컴파일"
+title:  "[NotePad++] NotePad++에서 PL/SQL 작성 및 컴파일"
 subtitle:   ""
 categories: dev
 tags: note
 --- 
+
 
 보통 PL/SQL, Table script을 복사해서 Toad나 DBeaver와 같은 툴에 붙여넣기하여 실행한다.
 
