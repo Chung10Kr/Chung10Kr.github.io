@@ -38,9 +38,9 @@ NotePad++에서 바로 sql파일을 실행 하면 쉽게 컴파일 할 수 있�
 # 4. NotePad++ 셋팅
 
 - F6 으로 Execute 실행
-- Command(s):에 아래 입력 (User, Pwd, Sid는 알아서 입력) 후 save
+- Command(s):에 아래 명령 입력 (User, Pwd, Sid는 알아서 입력) 후 save
 
-### sql파일 실행후 exit
+### sql파일 실행후 exit 하는 명령어
 ```
 set ORA_USER=dev01
 set ORA_PASS=dev01!
@@ -54,7 +54,7 @@ sqlplus -l $(ORA_USER)/$(ORA_PASS)@$(ORA_SID) @"$(SYS.TEMP)\$(FILE_NAME)"
 cmd /c del "$(SYS.TEMP)\$(FILE_NAME)"
 ```
 
-### sql파일 실행후 exit 안함
+### sql파일 실행후 exit 안하는 명령어
 ```
 set ORA_USER=dev01
 set ORA_PASS=dev01!
@@ -66,5 +66,7 @@ sqlplus -l $(ORA_USER)/$(ORA_PASS)@$(ORA_SID)
 ```
 
 
-# 5. F6으로 Execute 실행
+# 5. F6으로 Execute
+
+notepad++에서 sql파일을 실행 할 수 있다.
 
