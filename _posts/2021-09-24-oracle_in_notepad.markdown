@@ -26,10 +26,10 @@ NotePad++에서 바로 sql파일을 실행 하면 쉽게 컴파일 할 수 있�
 
 - NotePad++ 설치
 
+
 # 3. NotePad++ 플러그인 설치
 
 - Explorer
-- Mime tools
 - Npp Converter
 - NppExec
 - NppExport
@@ -53,6 +53,11 @@ cmd /c echo exit >> "$(SYS.TEMP)\$(FILE_NAME)"
 sqlplus -l $(ORA_USER)/$(ORA_PASS)@$(ORA_SID) @"$(SYS.TEMP)\$(FILE_NAME)"
 cmd /c del "$(SYS.TEMP)\$(FILE_NAME)"
 ```
+
+
+* 만약에 패스워드에 @가 들어갈 경우 -> 쌍따움표
+
+
 
 ### sql파일 실행후 exit 안하는 명령어
 ```
