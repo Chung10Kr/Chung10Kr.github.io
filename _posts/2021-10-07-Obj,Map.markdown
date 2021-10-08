@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "[Dev] Object vs Map"
+subtitle:   ""
+categories: dev
+tags: note
+--- 
+
+
+
+
+![img](https://chung10kr.github.io/assets/img/2021-10-07-1.PNG)
