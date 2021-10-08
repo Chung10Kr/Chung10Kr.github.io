@@ -65,4 +65,21 @@ var b_arr = [ ...a_arr ];
 var b_obj = { ...a_obj };
 var b_obj = JSON.parse( JSON.stringify(a_obj) );
 
+
+
+// ex 1 )
+var sockets = [];
+
+var socket = {};
+var socket2 = {};
+
+console.log(sockets) // []
+console.log(socket); // {}
+
+sockets.push(socket);
+sockets.push(socket2);
+console.log(sockets) // [ {},{} ]
+socket["abc"] = "abc";
+socket2["abc"] = "abc2";
+console.log(sockets)// [ { abc: 'abc' }, { abc: 'abc2' } ]
 ```
