@@ -3,17 +3,14 @@ layout: post
 title:  "[Node] Node.js - 키보드 입력시키기"
 subtitle:   "node-key-sender npm 사용"
 categories: dev
-tags: note
+tags: error
 ---
-물리적 키보드 입력과 같은 동작시키기!
 
-원격지 컴퓨터의 키보드 입력과 같은 동작이 필요했었습니다.
+물리적 키보드 입력과 같은 동작시키기
 
+원격지 컴퓨터의 키보드 입력과 같은 동작이 필요
 
-나쁜 의도가 아닌 데이터 입력을 위한 기능이였고
-
-
-node-key-sender npm을 통해 해결한 내용을 포스팅 하도록 하겠습니다.
+node-key-sender npm을 통해 해결한 내용을 포스팅
 
 ## 1.npm 설치
 
