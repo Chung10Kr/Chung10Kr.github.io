@@ -4,8 +4,16 @@ title:  "[interview] 인터뷰시 받았던 질문 "
 subtitle:   ""
 categories: memo
 --- 
+ 
 
-# AF******
+인터뷰시 받았던 질문 
+
+
+
+
+
+
+# AF****** 
 1. TDD을 잘 지키고 있는지
 2. TDD에 대해 어떻게 생각하는지
 3. Node에서 에러 핸들링은 어떻게 했는지
