@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[PostgreSQl]  PG/SQL Sample"
+title:  "[PostgreSQl]  PG/SQL Sample2 - Procedure"
 subtitle:   ""
 categories: dev
 tags: note
