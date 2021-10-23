@@ -7,7 +7,7 @@ categories: memo
  
 
 인터뷰시 받았던 질문 
-
+ 
 
 
 
@@ -32,7 +32,7 @@ categories: memo
 7. 퇴사사유
 
 # 동********
-1. MicroService Architecture (MSA)을 아는지
+1. MicroService Architecture (MSA) 을 아는지
 2. 스프링부트와 스프링의 차이
 3. 현업의 요청없이 본인의 필요에 의해 시스템을 발전시킨 경험이 있는지
 4. 코딩테스트의 해당 언어 선택 이유
