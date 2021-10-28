@@ -1,0 +1,240 @@
+---
+layout: post
+title:  "[Node] PM2"
+subtitle:   ""
+categories: note
+--- 
+ 
+
+
+
+NodeJs를 Back-End에서 사용할때 고민이 있음
+
+
+
+1. 서버가 갑자기 중지되는 경우
+2. NodeJs는 싱글 스레드기반인데 멀티코어 혹은 하이퍼 스레딩을 사용하고싶은 경우
+
+그럴때 **PM2 (Process Manager)**를 이용하면 해결 가능함
+
+
+# 설치방법
+```
+// 전역으로 실행
+npm install -g pm2
+```
+
+
+# 실행방법
+```
+pm2 start app.js
+```
+
+![img](https://chung10kr.github.io/assets/img/2021-10-29-1.png)
+
+pm2 start app.js처럼 옵션없이 실행하면 PM2의 기본 모드인 포크(fork)모드로 애플리케이션이 실행된다.
+
+
+그러나 우리는 모든 CPU를 사용하기 위해서 애플리케이션을 클러스터 모드로 실행해야 하고 그에 필요한 설정파일을 추가해야 한다.
+
+
+```javascript
+//ecosystem.config.js
+module.exports = {
+  apps: [{
+  name: 'app',
+  script: './app.js',
+  instances: 0,        // CPU 코어 수 만큼 프로세스를 실행함
+  exec_mode: ‘cluster’ // 클러스터 모드로 실행
+  }]
+}
+```
+
+```
+// 설정파일 start
+pm2 start ecosystem.config.js
+```
+
+
+![img](https://chung10kr.github.io/assets/img/2021-10-29-2.png)
+
+CPU코어 수 만큼 프로세스가 생성되며 최대 코어 수 만큼 요청을 처리한다.
+
+-> 노드가 싱글 스레드라서 주어진 자원을 최대한 활용하지 못하고 하나의 CPU만 사용하는 문제 해결 가능
+
+
+# 기타 사용법
+```
+pm2 scale app +4 // 프로세스 4개 늘리기
+pm2 scale app 4  // 프로세스 4개로 줄이기
+pm2 reload // 실행중인 프로세스 재시작
+pm2 list // 프로세스 상태 간략 표시 
+pm2 -version // 버전 확인
+pm2 start xxx.js // --watch 옵션 : 변경사항을 감지하여 자동 리로드, -i max(코어개수) : 클러스터모드 물론 코드로도 구현할 수 있음
+pm2 kill : start와 반대로 실행중인 PM2 데몬을 종료시킴
+pm2 delete [name] : [name]프로세스 종료
+pm2 log : 로그확인
+pm2 monit : PM2로 실행한 서버의 상황을 하눈에 확인함 (터미널에서 작업 시 q로 종료)
+```
+
+# 무중단 운영시 문제 발생
+
+pm2를 아직 제대로 운영해보지 않아 나는 경험하지 않았지만 다른 포스팅을 읽다보니 PM2의 문제가 있다는것을 발견했다.
+
+시스템의 새로운 기능을 추가하거나 오류를 수정한 소스를 배포후
+애플리케이션의 변경을 반영하기 위해서는 기존 프로세스를 재시작 해야 한다.
+
+이때 **reload** 명령어를 활용하면 프로세스를 재시작 할 수 있는데,
+이때 무중단 서비스를 유지하려면 몇 가지 주의해야 할 사항이 있다.
+
+
+>>LINE 타임라인 웹(Timeline Web) 프로젝트에서도 이와 같은 문제가 발생했습니다. 
+>>LINE 타임라인 웹은 SPA(Single Page Application) 구조의 CSR(Client Side Rendering) 방식으로 개발된 서비스였습니다. 
+>>여기에 Node.js를 도입해 리액트(React) SSR(Server Side Rendering)을 적용하고, 
+>>백엔드와의 통신을 Node.js에서 하도록 전환하고 있었습니다. 
+>>대부분의 개발이 완료되고 RC(Release Candidate) 환경에서 한창 QA를 진행하던 중이었습니다. 
+>>그런데 QA를 통해 발견된 버그를 수정하고 이를 확인하려고 하면, 배포 직후에만 가끔씩 브라우저에 ‘Service Unavailable’, 
+>>‘ERR_CONNECTION_REFUSED’ 같은 에러 메세지가 출력됐습니다. 
+>>로컬(Local)이나 베타(Beta) 환경에서는 문제가 없었습니다. 
+>>릴리스를 위한 준비 과정에서 문제가 발생한 것입니다. 
+>>아마도 대부분의 개발자들이 한 번씩 겪어봤을 문제라고 생각합니다. 
+>>이 현상은 나중에 서비스를 릴리스하고 나서 새로운 버전이나 핫픽스 등을 배포할 때 재현될 것이라고 판단했고, 
+>>원인을 찾아서 꼭 해결해야만 했습니다.
+
+
+### 프로세스 재시작 과정
+
+![img](https://chung10kr.github.io/assets/img/2021-10-29-3.png)
+
+1. pm2 reload
+2. pm2는 기존의 0번 프로세스를 _old_0 프로세스로 옮겨두고 0번 프로세스를 만듦
+3. 0번 프로세스가 요청을 처리할 준비를 다하면 마스터에게 'ready' 이벤트를 보냄
+4. 마스터 프로세스는 _old_0프로세스에게 SIGINT 시그널을 보내서 종료되기를 기다림
+5. 일정시간이 지나도 종료가 안되면 SIGKILL시그널을 보내 강제로 종료함
+6. 이 과정을 프로세스 개수만큼 반복하면 모든 프로세스의 재시작이 완료
+
+
+## 문제발생 1
+
+새로 만들어진 프로세스가 실제로 아직 요청을 받을 준비가 되지 않았는데 ready이벤트를 보내는 경우
+
+-> 기존의 프로세스도 종료되고 새로운것도 준비가 안된 상태
+
+-> 요청이 들어와도 처리가 안됨
+
+-> 즉 서비스가 중단
+
+
+### 문제 해결
+1. 프로세스가 수행될 때 바로 ready이벤트 보내지 말고 로직에서 요청 받을 준비가 완료된 시점에 ready이벤트 보내도록 처리
+2. 마스터 프로세스가 ready 이벤트를 언제까지 기다리게 할건 지 명시
+
+
+```javascript
+//ecosystem.config.js
+module.exports = {
+  apps: [{
+  name: 'app',
+  script: './app.js',
+  instances: 0,
+  exec_mode: ‘cluster’,
+  wait_ready: true, // 마스터 프로세스에게 ready 이벤트를 기다리라는 의미
+  listen_timeout: 50000 //  ready 이벤트를 기다릴 시간값(ms)을 의미
+  }]
+}
+```
+
+```javascript
+// app.js
+app.listen(port, function () {
+  process.send(‘ready’) //app.listen이 완료되면 실행되는 콜백(Callback) 함수에서 마스터 프로세스로 ready 이벤트를 보냄
+  console.log(`application is listening on port ${port}...`)
+})
+```
+
+### ready 이벤트 설정 후 
+
+![img](https://chung10kr.github.io/assets/img/2021-10-29-4.png)
+
+
+
+## 문제발생 2
+
+_old_0번 프로세스는 종료되기 전까지 계속해서 요청을 받는다.
+-> SIGINT시그널이 전달 된 상태에서 5초짜리 사용자 요청을 받음
+-> 1.6초후에 종료가 되지 않아서 SIGKILL 시그널을 받음
+-> 5초짜리 요청을 처리하는 도중 SIGKILL 시그널을 받아서 응답을 보내주지 못하고 프로세스 종료
+-> 클라이언트와 연결이 끊어지고 서비스 중단
+
+### 문제 해결
+1. SIGINT 시그널을 리스닝 하다가 해당 시그널이 전달되면 app.close명령어로 프로세스가 새로운 요청을 받는것을 거절하고 기존 연결을 유지되게 처리
+2. 사용자 요청을 처리하기에 충분한 시간을 kill_timeout에 설정
+3. 기존에 유지되고 있던 연결이 종료되면 프로세스가 종료되도록 처리
+
+```javascript
+//ecosystem.config.js
+module.exports = {
+  apps: [{
+  name: 'app',
+  script: './app.js',
+  instances: 0,
+  exec_mode: ‘cluster’,
+  wait_ready: true,
+  listen_timeout: 50000,
+  kill_timeout: 5000 // SIGINT 시그널을 보낸 후 프로세스가 종료되지 않았을 때 SIGKILL 시그널을 보내기까지의 대기 시간을 디폴트 값 1600ms에서 5000ms로 변경
+  }]
+}
+```
+
+```javascript
+//app.js
+app.listen(port, function () {
+  process.send(‘ready’)
+  console.log(`application is listening on port ${port}...`)
+})
+process.on('SIGINT', function () {
+  // SIGINT 시그널이 전달되면 새로운 요청을 받지 않고
+  // 연결되어 있는 요청이 완료되면 해당 프로세스를 종료
+  app.close(function () {
+  console.log('server closed')
+  process.exit(0)
+  })
+})
+```
+
+### HTTP 1.1 Keep-Alive를 사용하는 경우 
+```javascript
+//  HTTP 1.1 Keep-Alive를 사용하는 경우 
+/*
+HTTP 는 Connectionless 방식으로 연결을 매번 끊고 새로 생성하는 구조
+이는 Network 비용 측면에서 최초 연결을 하기 위해 많은 비용을 소비
+
+Keep Alive는 이미 연결되어 있는 TCP연결을 재사용하는 Keep-Alive라는 기능을 지원한다.
+이는 Handshake과정이 생략되므로 성능 향상을 기대 할 수 있다.
+*/
+//app.js
+const express = require('express')
+const app = express()
+const port = 3000
+let isDisableKeepAlive = false
+app.use(function(req, res, next) {
+  if (isDisableKeepAlive) {
+    res.set(‘Connection’, ‘close’)
+  }
+  next()
+})
+app.get('/', function(req, res) { 
+  res.send('Hello World!')
+})
+app.listen(port, function() {
+  process.send(‘ready’)
+  console.log(`application is listening on port ${port}...`)
+})
+process.on(‘SIGINT’, function () {
+  isDisableKeepAlive = true
+  app.close(function () {
+  console.log(‘server closed’)
+  process.exit(0)
+  })
+})
+```
