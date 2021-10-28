@@ -20,7 +20,7 @@ NodeJs를 Back-End에서 사용할때 고민이 있음
 
 # 설치방법
 ```
-// 전역으로 실행
+// 전역으로 설치
 npm install -g pm2
 ```
 
@@ -161,9 +161,12 @@ app.listen(port, function () {
 ## 문제발생 2
 
 _old_0번 프로세스는 종료되기 전까지 계속해서 요청을 받는다.
+
 -> SIGINT시그널이 전달 된 상태에서 5초짜리 사용자 요청을 받음
+
 -> 1.6초후에 종료가 되지 않아서 SIGKILL 시그널을 받음
 -> 5초짜리 요청을 처리하는 도중 SIGKILL 시그널을 받아서 응답을 보내주지 못하고 프로세스 종료
+
 -> 클라이언트와 연결이 끊어지고 서비스 중단
 
 ### 문제 해결
@@ -204,7 +207,6 @@ process.on('SIGINT', function () {
 
 ### HTTP 1.1 Keep-Alive를 사용하는 경우 
 ```javascript
-//  HTTP 1.1 Keep-Alive를 사용하는 경우 
 /*
 HTTP 는 Connectionless 방식으로 연결을 매번 끊고 새로 생성하는 구조
 이는 Network 비용 측면에서 최초 연결을 하기 위해 많은 비용을 소비
