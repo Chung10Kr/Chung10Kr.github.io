@@ -20,7 +20,8 @@ categories: note
 > Contrary to assumptions in other answers, this does not use gettext.
 > A very basic example would be (this particular string is already translated into English, 
 > Spanish and French in Kohana):
-```
+
+```php
 // 1. In your bootstrap.php somewhere below the Kohana::init line
 I18n::lang('fr');
 
@@ -36,7 +37,8 @@ echo __("Hello, world!"); // Bonjour, monde!
 > 다른 답변의 가정과 달리 gettext를 사용하지 않습니다.
 
 > 아주 기본적인 예는 다음과 같습니다(이 특정 문자열은 이미 Kohana에서 영어, 스페인어 및 프랑스어로 번역되어 있습니다):
-```
+
+```php
 // 1. In your bootstrap.php somewhere below the Kohana::init line
 I18n::lang('fr');
 
