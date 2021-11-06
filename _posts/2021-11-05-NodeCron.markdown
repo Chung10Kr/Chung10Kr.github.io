@@ -1,20 +1,24 @@
 ---
 layout: post
-title:  '[Node] node-cron vs setinterval'
+title:  '[Node] node-cron , setinterval'
 subtitle:   ""
 categories: note
 --- 
 
-스케줄 돌리는 Node소스에 cron이 있길래 setinterval과 비교하려 한다.
 
-# setinterval()
+
+
+
+
+
+# setInterval()
 
 일정한 시간 간격으로 작업을 수행하기 위해서 사용하며 clearInterval함수를 사용하여 중지 할 수 있다.
 주의할 점은 일정한 시간 간격으로 실행되는 작업이 그 시간 간격보다 오래걸릴 경우 문제가 발생할 수 있다.
 
 - 기본사용법
 ```javascript
-    setinterval(function(){
+    setInterval(function(){
         //
         //
         //
@@ -37,7 +41,7 @@ function StopClock() {
 
 # node-cron
 
-왜 우리 리눅스에서 크론탭할때 그 크론
+[npm 참고](https://www.npmjs.com/package/node-cron)
 
 - npm 설치
 ```javascript
@@ -78,7 +82,3 @@ var task = cron.schedule('* * * * *', () =>  {
 task.stop();
 ```
 
-### 비교
-
-반복적인 작업을 실행할때는 setInterval()
-특정 시간에 작업 진행을 실행할때는 cron
