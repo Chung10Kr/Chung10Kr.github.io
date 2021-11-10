@@ -1,0 +1,92 @@
+---
+layout: post
+title:  '[PgSql] 테이블별 용량, rowCount 가져오기'
+subtitle:   ""
+categories: note
+--- 
+ 
+
+
+
+테이블별 용량, rowCount 가져오기
+
+
+
+
+
+## 테이블별 rows count
+```
+
+select schemaname, relname,n_live_tup
+from pg_stat_user_tables
+where n_live_tup > 0
+order by n_live_tup desc;
+```
+
+## 테이블별 용량
+```
+SELECT *
+     , pg_size_pretty(total_bytes) AS total
+     , pg_size_pretty(index_bytes) AS INDEX
+     , pg_size_pretty(toast_bytes) AS toast
+     , pg_size_pretty(table_bytes) AS TABLE
+FROM (
+         SELECT *, total_bytes - index_bytes - COALESCE(toast_bytes, 0) AS table_bytes
+         FROM (
+                  SELECT c.oid
+                       , nspname                               AS table_schema
+                       , relname                               AS TABLE_NAME
+                       , c.reltuples                           AS row_estimate
+                       , pg_total_relation_size(c.oid)         AS total_bytes
+                       , pg_indexes_size(c.oid)                AS index_bytes
+                       , pg_total_relation_size(reltoastrelid) AS toast_bytes
+                  FROM   pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace
+                  WHERE  relkind = 'r'
+                    and  nspname = 'public'
+              ) a
+     ) a
+order by total_bytes desc;
+```
+
+
+## 테이블별 rows count 용량
+```
+
+WITH TABLES_ROWS AS (
+    SELECT SCHEMANAME,
+           RELNAME,
+           N_LIVE_TUP AS ROWS_CNT
+    FROM   PG_STAT_USER_TABLES
+    WHERE  N_LIVE_TUP > 0
+    AND    SCHEMANAME = 'public'
+),
+     TABLES_BYTES AS (
+    SELECT *
+         , PG_SIZE_PRETTY(TOTAL_BYTES) AS TOTAL
+         , PG_SIZE_PRETTY(INDEX_BYTES) AS INDEX
+         , PG_SIZE_PRETTY(TOAST_BYTES) AS TOAST
+         , PG_SIZE_PRETTY(TABLE_BYTES) AS TABLE
+    FROM (
+             SELECT *, TOTAL_BYTES - INDEX_BYTES - COALESCE(TOAST_BYTES, 0) AS TABLE_BYTES
+             FROM (
+                      SELECT C.OID
+                           , NSPNAME                               AS TABLE_SCHEMA
+                           , RELNAME                               AS TABLE_NAME
+                           , C.RELTUPLES                           AS ROW_ESTIMATE
+                           , PG_TOTAL_RELATION_SIZE(C.OID)         AS TOTAL_BYTES
+                           , PG_INDEXES_SIZE(C.OID)                AS INDEX_BYTES
+                           , PG_TOTAL_RELATION_SIZE(RELTOASTRELID) AS TOAST_BYTES
+                      FROM   PG_CLASS C LEFT JOIN PG_NAMESPACE N ON N.OID = C.RELNAMESPACE
+                      WHERE  RELKIND = 'r'
+                        AND  NSPNAME = 'public'
+                  ) A
+         ) A
+)
+SELECT A.RELNAME, A.ROWS_CNT, B.TOTAL
+FROM   TABLES_ROWS A , TABLES_BYTES B
+WHERE  A.RELNAME = B.TABLE_NAME
+ORDER BY B.TOTAL_BYTES DESC;
+--ORDER BY A.ROWS_CNT DESC;
+--ORDER BY A.RELNAME DESC;
+
+```
