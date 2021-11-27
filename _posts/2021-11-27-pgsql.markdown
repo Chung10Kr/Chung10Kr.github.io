@@ -1,0 +1,22 @@
+---
+layout: post
+title:  '[PHP] PHP 로그 남기고 실시간 확인'
+subtitle:   ""
+categories: note
+--- 
+ 
+
+
+
+# PHP 로그 남기기
+
+error_log ('{남기고자 하는 로그 메시지}', 3, "error.log 경로");
+
+[참고](https://www.php.net/manual/en/function.error-log.php)
+
+# 확인
+
+Powshell에서
+```
+Get-Content "error.log 경로" -Wait -Tail 10
+```
