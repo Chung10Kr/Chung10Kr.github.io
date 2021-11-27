@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  '[PHP] PHP 로그 남기고 실시간 확인'
+title:  '[PHP] PHP 로그 남기고 실시간 확인 window'
 subtitle:   ""
 categories: note
 --- 
  
+
+Php에서 로그를 남기고 실시간으로 확인하고 싶을때....
 
 
 
