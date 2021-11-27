@@ -8,13 +8,26 @@ categories: note
 
 Php에서 로그를 남기고 실시간으로 확인하고 싶을때....
 
+리눅스의 Tail은 알지만 윈도우에서 모를때...
+
+
+
+
 
 
 # PHP 로그 남기기
 
+
+
 error_log ('{남기고자 하는 로그 메시지}', 3, "error.log 경로");
 
+
+
 [참고](https://www.php.net/manual/en/function.error-log.php)
+
+
+
+
 
 # 확인
 
