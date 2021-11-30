@@ -26,8 +26,7 @@ BEGIN
 END
 $FUNC$;
 
-CREATE OR REPLACE VIEW tableInfo AS
-    select * from (
+ select * from (
         SELECT c.relname as "Name",
                pg_catalog.obj_description(c.oid, 'pg_class') as "Description",
                count_table( c.relname ) as "ROWS_CNT",
@@ -42,9 +41,7 @@ CREATE OR REPLACE VIEW tableInfo AS
           AND n.nspname !~ '^pg_toast'
         ORDER BY  pg_catalog.pg_table_size(c.oid) desc
     )A
-    where "ROWS_CNT" > 0;
-
-select * from tableInfo;
+where "ROWS_CNT" > 0;
 ```
 
 
@@ -127,6 +124,7 @@ WHERE PS.RELNAME  = '테이블명'
 
 
 # 컬럼 COMMENT 조회
+
 ```
 SELECT PS.RELNAME    AS TABLE_NAME
      ,PA.ATTNAME     AS COLUMN_NAME
@@ -143,3 +141,5 @@ WHERE PS.SCHEMANAME = (SELECT SCHEMANAME
   AND PD.OBJOID    = PA.ATTRELID
   AND PD.OBJSUBID  = PA.ATTNUM
 ORDER BY PS.RELNAME, PD.OBJSUBID ;
+
+```
