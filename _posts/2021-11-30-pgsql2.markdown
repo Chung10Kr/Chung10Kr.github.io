@@ -1,0 +1,80 @@
+---
+layout: post
+title:  '[Postgresql] psql 명령어 모음'
+subtitle:   ""
+categories: note
+--- 
+ 
+
+ 작업하면서 유용한 명렁어 모음집 - 개인저장용
+
+
+# psql 명령어
+
+```
+psql -U postgres : pgql 접속
+\c [DB Name] [Connection User] : DB instance 변경
+\list(or \l) : 전체 Database Instance 목록
+\dn : 스키마 조회
+\du : 계정 조회
+\dt : 접속한 DB Instance의 Table 목록
+\ds : Sequence 목록
+\df : Function 목록
+\dv : View 목록
+\du : User 목록
+\q : pgql 나가기
+```
+
+
+# 스키마 생성,삭제
+
+```
+-- 스키마 생성
+CREATE SCHEMA schema_name AUTHORIZATION username;
+-- 스키마 이름 변경
+ALTER SCHEMA schema_name RENAME TO new_schema_name;
+-- 스키마 소유자 변경
+ALTER SCHEMA username OWNER TO new_username;
+-- 스키마 삭제
+DROP SCHEMA schema_name CASCADE;
+```
+
+
+
+# Database 생성 삭제
+```
+-- Database 생성
+create Database myDb owner myUser;
+-- Database 삭제
+Drop Database myDb;
+
+-- 가끔 세션 물고있을때가 있음
+SELECT 
+    pg_terminate_backend(pid) 
+FROM 
+    pg_stat_activity 
+WHERE 
+    -- don't kill my own connection!
+    pid <> pg_backend_pid()
+    -- don't kill the connections to other databases
+    AND datname = 'myDb';
+
+REVOKE CONNECT ON DATABASE myDb FROM PUBLIC, myUser;
+
+```
+
+
+# Pg_dump
+```
+
+-- 덤프 (sql 파일로)
+pg_dump -U username -D dbname > backup.sql
+
+-- 덤프 (다른 DB로)
+pg_dump -U username -D dbname | psql -U username -D dbname
+
+-s : 스키마만 복사
+-a : 데이터만 복사
+
+```
+
