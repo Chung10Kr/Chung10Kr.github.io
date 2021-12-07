@@ -1,0 +1,103 @@
+---
+layout: post
+title:  '[cmd] Tree 명령어'
+subtitle:   ""
+categories: note
+--- 
+ 
+
+윈도우 cmd에서 Tree명령어를 사용하면 프로젝트 구조에 대해 설명할때 유용
+
+
+
+
+
+# Window
+
+
+## Tree
+
+```
+$ tree 
+```
+
+/f : 각 폴더의 있는 파일 이름을 화면에 표시합니다.
+
+/a : 그래픽 문자대신 텍스트 문자를 사용합니다.
+
+## 예시
+```
+tree /a
+```
+
+```
+D:\
+
+├─efi
+
+│  └─boot
+
+├─manual
+
+├─AIRPLANEMODE
+
+├─AUDIO
+
+│  ├─Config
+
+│  ├─WIN32
+
+│  └─WIN64
+
+├─BLUETOOTH
+
+
+```
+
+
+
+# Mac
+
+## tree 설치
+```
+$ brew install tree
+```
+
+## Tree& 예시
+```
+tree
+```
+
+```
+.
+├── 404.md
+├── Gemfile
+├── Gemfile.lock
+├── LICENSE.md
+├── README.md
+├── _config.yml
+├── _data
+│   ├── _resume.yml
+│   ├── authors.yml
+│   ├── countries.yml
+│   ├── resume.json
+│   └── social.yml
+├── _featured_categories
+│   ├── devlog.md
+│   └── memo.md
+├── _featured_tags
+│   ├── dev-error.md
+│   └── dev-etc.md
+├── _includes
+
+```
+
+
+
+
+
+# 실행 및 저장
+```
+tree > test.txt 
+```
+tree 실행결과가 test.txt의 저장됨. Mac, Window 동일
