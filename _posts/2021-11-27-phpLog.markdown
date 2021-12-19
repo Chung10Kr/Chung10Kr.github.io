@@ -2,7 +2,8 @@
 layout: post
 title:  '[PHP] PHP 로그 남기고 실시간 확인 window'
 subtitle:   ""
-categories: note
+categories: dev
+tags: note
 --- 
  
 

@@ -2,7 +2,8 @@
 layout: post
 title:  '[Postgresql] psql 명령어 모음'
 subtitle:   ""
-categories: note
+categories: dev
+tags: note
 --- 
  
 

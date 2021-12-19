@@ -2,7 +2,8 @@
 layout: post
 title:  '[cmd] Tree 명령어'
 subtitle:   ""
-categories: note
+categories: dev
+tags: note
 --- 
  
 

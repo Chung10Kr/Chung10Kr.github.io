@@ -2,7 +2,8 @@
 layout: post
 title:  '[Postgresql] 유용한 쿼리'
 subtitle:   ""
-categories: note
+categories: dev
+tags: note
 --- 
  
 

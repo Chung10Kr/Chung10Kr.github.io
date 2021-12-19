@@ -2,7 +2,8 @@
 layout: post
 title:  "[Node] PM2"
 subtitle:   ""
-categories: note
+categories: dev
+tags: note
 --- 
  
 

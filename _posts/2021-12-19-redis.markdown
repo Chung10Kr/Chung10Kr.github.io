@@ -2,7 +2,8 @@
 layout: post
 title:  '[Redis] Error - ERR Client sent AUTH,but no password is set .......'
 subtitle:   ""
-categories: error
+categories: dev
+tags: error
 --- 
  
 
