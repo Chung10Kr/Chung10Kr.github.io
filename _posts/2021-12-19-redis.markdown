@@ -1,0 +1,32 @@
+---
+layout: post
+title:  '[Redis] Error - ERR Client sent AUTH,but no password is set .......'
+subtitle:   ""
+categories: error
+--- 
+ 
+
+Redis ERR Client sent AUTH,but no password is set....에러 발생시
+
+
+Redis는 클라이언트가 command를 실행하기 위해 Password를 요구할 수 있다.
+그리고 그 password는 Configuration file에 requirepass에 저장되어 있는데
+requirepass가 없을때 위와 같은 에러메세지가 나온다.
+
+# 해결방법
+```
+1. redis-cli 접속
+127.0.0.1:6379> config get requirepass
+1) "requirepass"
+2) ""
+127.0.0.1:6379> config set requirepass password
+OK
+127.0.0.1:6379> config get requirepass
+(error) NOAUTH Authentication required.
+127.0.0.1:6379> auth password
+OK
+127.0.0.1:6379> config get requirepass
+1) "requirepass"
+2) "password"
+```
+
