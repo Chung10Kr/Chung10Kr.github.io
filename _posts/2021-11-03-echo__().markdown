@@ -2,7 +2,8 @@
 layout: post
 title:  '[PHP] echo __("안녕하세요")'
 subtitle:   ""
-categories: note
+categories: dev
+tags: note
 --- 
  
 
