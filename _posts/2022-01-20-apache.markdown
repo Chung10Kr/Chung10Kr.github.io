@@ -1,0 +1,28 @@
+---
+layout: post
+title:  '[Apache] restart vs gracefull'
+subtitle:   ""
+categories: dev
+tags: note
+--- 
+ 
+ 
+
+
+ # restart 
+
+ apache의 모든 프로세스를 종료 시키고 재시작함
+
+ stop -> start와 동일
+
+ 완전한 종료가 되고 서비스 끊김이 발생함
+
+
+
+ # graceful
+
+접속된 커넥션을 유지하면서 프로세스를 종료, 재시작
+
+이때 세션의 종료 없이 설정파일을 불러서 재실행함
+
+운영서버에서는 restart보다 graceful 사용을 권장함 

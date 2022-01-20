@@ -1,0 +1,39 @@
+---
+layout: post
+title:  '[Postgresql] 계층형 쿼리'
+subtitle:   ""
+categories: dev
+tags: note
+--- 
+ 
+ 
+ 
+
+ WITH RECURSIVE dept_record(idx, parent, name, help, level, path, cycle) AS (
+    SELECT
+           d.idx,
+           d.parent,
+           d.name,
+           d.help,
+           0,
+           ARRAY [d.idx],
+           false
+    FROM t_menu d
+    WHERE d.parent IS NULL
+    UNION ALL
+    SELECT
+           d.idx,
+           d.parent,
+           d.name,
+           d.help,
+           level + 1,
+           path || d.idx,
+           d.idx = ANY (path)
+    FROM t_menu d,
+         dept_record dr
+    WHERE d.parent = dr.idx
+      AND NOT CYCLE
+    )
+SELECT idx, parent, name, help, level, path
+FROM dept_record
+ORDER BY path;
