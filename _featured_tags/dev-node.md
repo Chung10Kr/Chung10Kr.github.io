@@ -4,5 +4,6 @@ title: Node
 slug: node
 category: dev
 menu: false
-order: 3
+order: 4
+header-img: "/img/node-logo.png"
 ---
