@@ -3,7 +3,7 @@ layout: post
 title:  "[Node] Node.js - 오라클 연동에 mybatis까지"
 subtitle:   "Node에 오라클에 mybatis까지"
 categories: dev
-tags: note
+tags: node
 ---
 
 Node에 오라클(추천하지 않지만)연동 , Mybatis까지 적용해보자.
