@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Dev Note
+title: Vue
 slug: vue
-category: vue
+category: dev
 menu: false
 order: 3
 ---
