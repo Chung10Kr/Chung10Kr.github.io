@@ -60,3 +60,18 @@ $result = arr_sort( $arr,'name', 'desc' );
 
 
 
+
+# 다시 생각해 보니 usort()를 쓰자.
+
+```php
+
+usort($arr , function(a,b){
+  return $a['name'] - $b['name'];
+})
+
+
+usort($arr , function(a,b){
+  return $b['name'] - $a['name'];
+})
+
+```
