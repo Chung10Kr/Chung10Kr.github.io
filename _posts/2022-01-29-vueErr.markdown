@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  '[Vue] Uncaught TypeError: Cannot read properties of undefined (reading 'prototype')'
+title:  "[Vue] Uncaught TypeError: Cannot read properties of undefined (reading 'prototype') "
 subtitle:   ""
 categories: dev
 tags: error
